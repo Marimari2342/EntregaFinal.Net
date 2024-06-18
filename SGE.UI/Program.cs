@@ -11,10 +11,9 @@ builder.Services.AddSingleton<WeatherForecastService>();
 
 //Casos de uso de administrador
 //agregamos estos servicios al contenedor DI
-builder.Services.AddTransient<AgregarUsuarioUseCase>();
-builder.Services.AddTransient<ListarUsuarioUseCase>();
-builder.Services.AddTransient<EliminarUsuarioUseCase>();
-builder.Services.AddTransient<ModificarUsuarioUseCase>();
+builder.Services.AddTransient<CasoDeUsoModificarUsuario>();
+builder.Services.AddTransient<CasoDeUsoUsuarioBaja>();
+builder.Services.AddTransient<CasoDeUsoListarUsuarios>();
 
 //Casos de uso de usario
 builder.Services.AddTransient<CasoDeUsoExpedienteAlta>();

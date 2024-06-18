@@ -1,6 +1,7 @@
 using SGE.UI.Components;
 using SGE.Repositorios;
-using SGE.Aplicacion;
+using SGE.Aplicacion.CasosDeUso;
+using SGE.Aplicacion.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,22 +12,21 @@ builder.Services.AddSingleton<WeatherForecastService>();
 
 //Casos de uso de administrador
 //agregamos estos servicios al contenedor DI
-builder.Services.AddTransient<CasoDeUsoModificarUsuario>();
-builder.Services.AddTransient<CasoDeUsoUsuarioBaja>();
-builder.Services.AddTransient<CasoDeUsoListarUsuarios>();
+//builder.Services.AddTransient<CasoDeUsoModificarUsuario>();
+//builder.Services.AddTransient<CasoDeUsoEliminarUsuario>();
+//builder.Services.AddTransient<CasoDeUsoListarUsuarios>();
+//builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorioMock>();
 
 //Casos de uso de usario
-builder.Services.AddTransient<CasoDeUsoExpedienteAlta>();
-builder.Services.AddTransient<CasoDeUsoExpedienteBaja>();
-builder.Services.AddTransient<CasoDeUsoExpedienteConsultaPorId>();
-builder.Services.AddTransient<CasoDeUsoExpedienteModificacion>();
-builder.Services.AddTransient<CasoDeUsoExpedienteConsultaTodos>();
-builder.Services.AddTransient<CasoDeUsoExpedienteConsultaTodos>();
+//builder.Services.AddTransient<CasoDeUsoExpedienteAlta>();
+//builder.Services.AddTransient<CasoDeUsoExpedienteBaja>();
+//builder.Services.AddTransient<CasoDeUsoExpedienteConsultaPorId>();
+//builder.Services.AddTransient<CasoDeUsoExpedienteModificacion>();
+//builder.Services.AddTransient<CasoDeUsoExpedienteConsultaTodos>();
+//builder.Services.AddTransient<CasoDeUsoExpedienteConsultaTodos>();
 //Faltan agregar los otros?
 
 var app = builder.Build();
-
-/*
 app.UseStaticFiles();
 app.UseAntiforgery();
 
@@ -34,4 +34,3 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 app.Run();
-*/

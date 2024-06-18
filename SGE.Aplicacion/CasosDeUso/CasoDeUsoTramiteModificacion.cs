@@ -2,6 +2,8 @@
 using SGE.Aplicacion.Enumerativos;
 using SGE.Aplicacion.Interfaces;
 using SGE.Aplicacion.Validadores;
+using SGE.Aplicacion.Servicios;
+using SGE.Aplicacion.Excepciones;
 namespace SGE.Aplicacion.CasosDeUso;
 
 public class CasoDeUsoTramiteModificacion (ITramiteRepositorio _tramiteRepositorio, IServicioAutorizacion servicioAutorizacion,ServicioActualizacionEstado actualizar)

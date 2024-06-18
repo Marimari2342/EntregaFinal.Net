@@ -1,5 +1,6 @@
 ﻿using SGE.Aplicacion.Entidades;
 using SGE.Aplicacion.Interfaces;
+using SGE.Aplicacion.Excepciones;
 namespace SGE.Aplicacion.CasosDeUso;
 
 public class CasoDeUsoExpedienteConsultaPorId(IExpedienteRepositorio _expedientes, ITramiteRepositorio _tramite)

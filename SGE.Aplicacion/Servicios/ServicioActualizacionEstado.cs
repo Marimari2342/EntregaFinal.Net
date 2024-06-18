@@ -1,4 +1,6 @@
-﻿namespace SGE.Aplicacion;
+﻿using SGE.Aplicacion.Entidades;
+using SGE.Aplicacion.Interfaces;
+namespace SGE.Aplicacion.Servicios;
 
 public class ServicioActualizacionEstado (IEspecificacionCambioEstado _especificacion, ITramiteRepositorio _tramiteRepositorio, IExpedienteRepositorio _expedienteRepositorio)
 {

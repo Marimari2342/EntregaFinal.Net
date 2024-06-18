@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj": {}
+    "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.UI\\SGE.UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj": {
+    "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.UI\\SGE.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj",
-        "projectName": "SGE.Aplicacion",
-        "projectPath": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj",
+        "projectUniqueName": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.UI\\SGE.UI.csproj",
+        "projectName": "SGE.UI",
+        "projectPath": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.UI\\SGE.UI.csproj",
         "packagesPath": "C:\\Users\\laule\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Aplicacion\\obj\\",
+        "outputPath": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.UI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\laule\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -54,6 +54,9 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

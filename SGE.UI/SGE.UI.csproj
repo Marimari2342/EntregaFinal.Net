@@ -1,6 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <ItemGroup>
+    <Content Remove="Components\DialogoConfirmacion.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\SGE.Aplicacion\SGE.Aplicacion.csproj" />
     <ProjectReference Include="..\SGE.Repositorios\SGE.Repositorios.csproj" />
   </ItemGroup>
@@ -10,5 +14,17 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Components\DialogoConfirmacion.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Components\DialogoConfirmacion.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Components\DialogoConfirmacion.razor" />
+  </ItemGroup>
 
 </Project>

@@ -1,5 +1,7 @@
 ﻿namespace SGE.Repositorios;
-using SGE.Aplicacion;
+using SGE.Aplicacion.Entidades;
+using SGE.Aplicacion.Interfaces;
+using SGE.Aplicacion.Enumerativos;
 public class TramiteRepositorioTXT : ITramiteRepositorio
 {
     readonly string _nombreArch="tramites.txt";

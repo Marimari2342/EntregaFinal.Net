@@ -1,4 +1,5 @@
-﻿namespace SGE.Aplicacion;
+﻿using SGE.Aplicacion.Enumerativos;
+namespace SGE.Aplicacion.Interfaces;
 
 public interface IEspecificacionCambioEstado
 {

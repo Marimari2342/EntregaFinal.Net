@@ -1,6 +1,8 @@
 ﻿using SGE.Aplicacion.Entidades;
 using SGE.Aplicacion.Enumerativos;
 using SGE.Aplicacion.Interfaces;
+using SGE.Aplicacion.Servicios;
+using SGE.Aplicacion.Exepciones;
 namespace SGE.Aplicacion.CasosDeUso;
 
 public class CasoDeUsoTramiteBaja(ITramiteRepositorio _tramiteRepositorio, IServicioAutorizacion _servicioAutorizacion,ServicioActualizacionEstado actualizar)

@@ -2,6 +2,7 @@
 using SGE.Aplicacion.Enumerativos;
 using SGE.Aplicacion.Interfaces;
 using SGE.Aplicacion.Validadores;
+using SGE.Aplicacion.Exepciones;
 namespace SGE.Aplicacion.CasosDeUso;
 
 public class CasoDeUsoExpedienteAlta (IExpedienteRepositorio _expedienteRepo, IServicioAutorizacion _servicioAutorizacion )

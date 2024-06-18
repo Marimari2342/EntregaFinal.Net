@@ -1,6 +1,6 @@
+using SGE.Aplicacion.Enumerativos;
 
-
-using SGE.Aplicacion;
+namespace SGE.Aplicacion.Entidades;
 
 public class Usuario
 {

@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\SGE.UI.bundle.scp.css"
     },
     {
+      "Id": "D:\\Universidad\\Segundo año\\.Net\\EntregaFinal\\EntregaFinal.Net\\SGE.UI\\wwwroot\\EntregaFinal.html",
+      "PackagePath": "staticwebassets\\EntregaFinal.html"
+    },
+    {
       "Id": "D:\\Universidad\\Segundo año\\.Net\\EntregaFinal\\EntregaFinal.Net\\SGE.UI\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },

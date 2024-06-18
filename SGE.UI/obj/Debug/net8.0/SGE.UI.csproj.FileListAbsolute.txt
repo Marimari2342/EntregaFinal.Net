@@ -44,3 +44,32 @@ C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.sourcel
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.dll
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\refint\SGE.UI.dll
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.pdb
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\Microsoft.Data.Sqlite.dll
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Sqlite.dll
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\SQLitePCLRaw.batteries_v2.dll
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\SQLitePCLRaw.core.dll
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\SQLitePCLRaw.provider.e_sqlite3.dll
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\runtimes\browser-wasm\nativeassets\net8.0\e_sqlite3.a
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\runtimes\linux-arm\native\libe_sqlite3.so
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\runtimes\linux-arm64\native\libe_sqlite3.so
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\runtimes\linux-armel\native\libe_sqlite3.so
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\runtimes\linux-mips64\native\libe_sqlite3.so
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\runtimes\linux-musl-arm\native\libe_sqlite3.so
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\runtimes\linux-musl-arm64\native\libe_sqlite3.so
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\runtimes\linux-musl-x64\native\libe_sqlite3.so
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\runtimes\linux-ppc64le\native\libe_sqlite3.so
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\runtimes\linux-s390x\native\libe_sqlite3.so
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\runtimes\linux-x64\native\libe_sqlite3.so
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\runtimes\linux-x86\native\libe_sqlite3.so
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\runtimes\maccatalyst-arm64\native\libe_sqlite3.dylib
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\runtimes\maccatalyst-x64\native\libe_sqlite3.dylib
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\runtimes\osx-arm64\native\libe_sqlite3.dylib
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\runtimes\osx-x64\native\libe_sqlite3.dylib
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\runtimes\win-arm\native\e_sqlite3.dll
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\runtimes\win-arm64\native\e_sqlite3.dll
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\runtimes\win-x64\native\e_sqlite3.dll
+D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\runtimes\win-x86\native\e_sqlite3.dll

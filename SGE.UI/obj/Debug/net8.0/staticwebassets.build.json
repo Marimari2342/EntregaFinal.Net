@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yshctQisX/P3UY9mKsK1Yfuz3qey6CG2v57HZkNR+eY=",
+  "Hash": "TwTM2Rq18rXffnXjQVO0XA7HsFR4qEPlH8/fPDAQujE=",
   "Source": "SGE.UI",
   "BasePath": "_content/SGE.UI",
   "Mode": "Default",
@@ -110,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Identity": "D:\\Universidad\\Segundo año\\.Net\\EntregaFinal\\EntregaFinal.Net\\SGE.UI\\wwwroot\\EntregaFinal.html",
+      "SourceId": "SGE.UI",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Universidad\\Segundo año\\.Net\\EntregaFinal\\EntregaFinal.Net\\SGE.UI\\wwwroot\\",
+      "BasePath": "_content/SGE.UI",
+      "RelativePath": "EntregaFinal.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\EntregaFinal.html"
     },
     {
       "Identity": "D:\\Universidad\\Segundo año\\.Net\\EntregaFinal\\EntregaFinal.Net\\SGE.UI\\wwwroot\\favicon.png",

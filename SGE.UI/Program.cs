@@ -1,19 +1,33 @@
 using SGE.UI.Components;
+using SGE.Repositorios;
+using SGE.Aplicacion;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorComponents()
-    .AddInteractiveServerComponents();
+builder.Services.AddRazorPages();
+builder.Services.AddServerSideBlazor();
+builder.Services.AddSingleton<WeatherForecastService>();
+
+//Casos de uso de administrador
+//agregamos estos servicios al contenedor DI
+builder.Services.AddTransient<AgregarUsuarioUseCase>();
+builder.Services.AddTransient<ListarUsuarioUseCase>();
+builder.Services.AddTransient<EliminarUsuarioUseCase>();
+builder.Services.AddTransient<ModificarUsuarioUseCase>();
+
+//Casos de uso de usario
+builder.Services.AddTransient<CasoDeUsoExpedienteAlta>();
+builder.Services.AddTransient<CasoDeUsoExpedienteBaja>();
+builder.Services.AddTransient<CasoDeUsoExpedienteConsultaPorId>();
+builder.Services.AddTransient<CasoDeUsoExpedienteModificacion>();
+builder.Services.AddTransient<CasoDeUsoExpedienteConsultaTodos>();
+builder.Services.AddTransient<CasoDeUsoExpedienteConsultaTodos>();
+//Faltan agregar los otros?
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Error", createScopeForErrors: true);
-}
-
+/*
 app.UseStaticFiles();
 app.UseAntiforgery();
 
@@ -21,3 +35,4 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 app.Run();
+*/

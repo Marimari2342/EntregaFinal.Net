@@ -34,3 +34,13 @@ D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\obj\Debug\
 D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.pdb
 D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.genruntimeconfig.cache
 D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\ref\SGE.UI.dll
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.csproj.AssemblyReference.cache
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.AssemblyInfoInputs.cache
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.AssemblyInfo.cs
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.csproj.CoreCompileInputs.cache
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.sourcelink.json
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.dll
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\refint\SGE.UI.dll
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.pdb

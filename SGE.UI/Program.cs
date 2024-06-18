@@ -1,19 +1,21 @@
 using SGE.UI.Components;
 using SGE.Repositorios;
-using SGE.Aplicacion;
+using SGE.Aplicacion.CasosDeUso;
+using SGE.Aplicacion.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-//builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddSingleton<WeatherForecastService>();
 
 //Casos de uso de administrador
 //agregamos estos servicios al contenedor DI
 //builder.Services.AddTransient<CasoDeUsoModificarUsuario>();
-//builder.Services.AddTransient<CasoDeUsoUsuarioBaja>();
+//builder.Services.AddTransient<CasoDeUsoEliminarUsuario>();
 //builder.Services.AddTransient<CasoDeUsoListarUsuarios>();
+//builder.Services.AddScoped<IUsuarioRepositorio, UsuarioRepositorioMock>();
 
 //Casos de uso de usario
 //builder.Services.AddTransient<CasoDeUsoExpedienteAlta>();
@@ -25,8 +27,6 @@ builder.Services.AddServerSideBlazor();
 //Faltan agregar los otros?
 
 var app = builder.Build();
-
-/*
 app.UseStaticFiles();
 app.UseAntiforgery();
 
@@ -34,4 +34,3 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 app.Run();
-*/

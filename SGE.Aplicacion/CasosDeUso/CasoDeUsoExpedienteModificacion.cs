@@ -4,6 +4,7 @@ public class CasoDeUsoExpedienteModificacion(IExpedienteRepositorio expedienteRe
 {
     public void Ejecutar(Expediente expediente,int idUsuario)
     { 
+        //hyyyyyyyyyy
             if(_servicioAutorizacion.PoseeElPermiso(idUsuario, Permiso.ExpedienteModificacion)){
                 expediente.IdUsuarioUltimaModificacion=idUsuario;
                 string mensajeError;

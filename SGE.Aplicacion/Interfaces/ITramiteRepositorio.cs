@@ -5,12 +5,11 @@ namespace SGE.Aplicacion.Interfaces;
 public interface ITramiteRepositorio
 {
     void Agregar(Tramite tramite);
-    void Eliminar(int id, out bool ok);
-    void Modificar(Tramite tramite, out bool ok);
+    void Eliminar(Tramite tramite);
+    void Modificar(Tramite tramite);
     List<Tramite> ListarPorIdExpediente(int id);
     List<Tramite> ListarPorEtiqueta(EtiquetaTramite etiqueta);
-    int ObtenerSiguienteId();
-    void EliminarTramitesPorIdExpediente(int idExpediente);
+    List<Tramite> ListarTramite();
     Tramite ObtenerPorId(int id);
 
 }

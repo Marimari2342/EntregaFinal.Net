@@ -55,4 +55,20 @@ public class TramiteRepositorioSQL: ITramiteRepositorio
         return resultado;
     }
   }
+
+  public List<Tramite> ListarTramite(){
+    using (var db = new EntidadesContext()){
+        return db.tramites.ToList();
+    }
+  }
+
+  public Tramite ObtenerPorId(int id)
+  {
+    using (var db = new EntidadesContext())
+    {
+        return db.tramites.FirstOrDefault(t => t.Id == id);
+    }
+   }
 }
+
+

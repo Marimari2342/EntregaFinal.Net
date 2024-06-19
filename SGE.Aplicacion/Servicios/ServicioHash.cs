@@ -2,6 +2,16 @@
 using System.Security.Cryptography;
 using System.Text;
 
+/*El sistema toma esa contraseña, le agrega una especie de "algo" único y aleatorio (llamado sal), 
+y luego convierte toda esa mezcla en una serie de letras y números que no se parece en nada a la contraseña original. 
+Eso es "hash SHA-256". 
+Aunque alguien acceda a la base de datos, no puede descifrar las contraseñas originales 
+porque solo verá estas cadenas de caracteres aparentemente aleatorias. 
+La sal garantiza que incluso contraseñas similares tengan hashes diferenteS.*/
+/*El nombre "SHA-256" proviene de su diseño como parte del conjunto de algoritmos Secure Hash Algorithm (SHA), 
+desarrollados por la Agencia de Seguridad Nacional (NSA) de los Estados Unidos. 
+"SHA" se refiere a Secure Hash Algorithm, y el número "256" indica la longitud del hash que produce: 256 bits. */
+
 public class HashService : IHashService
 {
     public (string Hash, string Salt) CreateHash(string password)

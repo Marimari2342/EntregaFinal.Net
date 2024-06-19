@@ -33,3 +33,11 @@ C:\Users\laule\seminario\EntregaFinal.Net\SGE.Aplicacion\obj\Debug\net8.0\SGE.Ap
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.Aplicacion\obj\Debug\net8.0\refint\SGE.Aplicacion.dll
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.Aplicacion\obj\Debug\net8.0\SGE.Aplicacion.pdb
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.Aplicacion\obj\Debug\net8.0\ref\SGE.Aplicacion.dll
+C:\Users\CONSU\proyectosDotnet\EntregaFinal.Net\SGE.Aplicacion\obj\Debug\net8.0\SGE.Aplicacion.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CONSU\proyectosDotnet\EntregaFinal.Net\SGE.Aplicacion\obj\Debug\net8.0\SGE.Aplicacion.AssemblyInfoInputs.cache
+C:\Users\CONSU\proyectosDotnet\EntregaFinal.Net\SGE.Aplicacion\obj\Debug\net8.0\SGE.Aplicacion.AssemblyInfo.cs
+C:\Users\CONSU\proyectosDotnet\EntregaFinal.Net\SGE.Aplicacion\obj\Debug\net8.0\SGE.Aplicacion.csproj.CoreCompileInputs.cache
+C:\Users\CONSU\proyectosDotnet\EntregaFinal.Net\SGE.Aplicacion\obj\Debug\net8.0\SGE.Aplicacion.sourcelink.json
+C:\Users\CONSU\proyectosDotnet\EntregaFinal.Net\SGE.Aplicacion\obj\Debug\net8.0\SGE.Aplicacion.dll
+C:\Users\CONSU\proyectosDotnet\EntregaFinal.Net\SGE.Aplicacion\obj\Debug\net8.0\refint\SGE.Aplicacion.dll
+C:\Users\CONSU\proyectosDotnet\EntregaFinal.Net\SGE.Aplicacion\obj\Debug\net8.0\SGE.Aplicacion.pdb

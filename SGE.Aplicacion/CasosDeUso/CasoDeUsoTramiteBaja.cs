@@ -11,17 +11,14 @@ public class CasoDeUsoTramiteBaja(ITramiteRepositorio _tramiteRepositorio, IServ
                 // Verificar permisos
                 if(_servicioAutorizacion.PoseeElPermiso(idUsuario, Permiso.TramiteBaja)){
                     tramite.IdUsuarioUltimaModificacion = idUsuario;
-                    bool ok;
-                    Tramite aux = _tramiteRepositorio.ObtenerPorId(tramite.Id);
-                    _tramiteRepositorio.Eliminar(tramite.Id, out ok);
-                    if(ok){
-                        //Actualizar estado del expediente
+                    Tramite? aux = _tramiteRepositorio.ObtenerPorId(tramite.Id);
+                    if(aux != null){
+                        _tramiteRepositorio.Eliminar(tramite);
                         actualizar.ActualizarEstado(aux.ExpedienteId);
                     }
                     else{
                         throw new RepositorioException("Id de trámite no encontrado");
                     }
-
                 }
                 else{
                     throw new AutorizacionException();

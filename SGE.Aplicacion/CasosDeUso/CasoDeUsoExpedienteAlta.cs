@@ -17,7 +17,6 @@ public class CasoDeUsoExpedienteAlta (IExpedienteRepositorio _expedienteRepo, IS
                 expediente.FechaCreacion = DateTime.Now;
                 expediente.UltimaModificacion = DateTime.Now;
                 expediente.Estado = EstadoExpediente.RecienIniciado;
-                expediente.Id = _expedienteRepo.ObtenerSiguienteId();
                 // Guardar expediente en el repositorio
                 _expedienteRepo.Agregar(expediente);
             }

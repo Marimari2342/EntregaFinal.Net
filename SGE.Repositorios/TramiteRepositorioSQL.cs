@@ -62,7 +62,7 @@ public class TramiteRepositorioSQL: ITramiteRepositorio
     }
   }
 
-  public Tramite ObtenerPorId(int id)
+  public Tramite? ObtenerPorId(int id)
   {
     using (var db = new EntidadesContext())
     {

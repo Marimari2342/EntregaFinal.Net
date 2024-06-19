@@ -40,15 +40,17 @@ public class ExpedienteRepositorioSQL:IExpedienteRepositorio
     }
 
     //Caso de uso Consulta por Id
-    public Expediente ObtenerPorId(int id){
+    public Expediente? ObtenerPorId(int id){
         using(var db=new EntidadesContext()){  
             var expediente = db.Expedientes.Where(t => t.Id == id).SingleOrDefault();
-            if (expediente != null) return expediente;
+            return expediente;
+            /*if (expediente != null) return expediente;
             else{
                 var e=new Expediente();
                 e.Id=-1;
                 return e;  
             } 
+            */
         }
     }
     public List<Expediente> ListarExpedientesConSusTramites()

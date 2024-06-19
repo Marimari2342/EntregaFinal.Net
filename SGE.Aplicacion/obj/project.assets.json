@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\laule\\.nuget\\packages\\": {}
+    "C:\\Users\\CONSU\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj",
+      "projectUniqueName": "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj",
       "projectName": "SGE.Aplicacion",
-      "projectPath": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj",
-      "packagesPath": "C:\\Users\\laule\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Aplicacion\\obj\\",
+      "projectPath": "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj",
+      "packagesPath": "C:\\Users\\CONSU\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.Aplicacion\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\laule\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\CONSU\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

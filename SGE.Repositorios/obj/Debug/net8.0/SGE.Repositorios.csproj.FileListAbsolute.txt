@@ -45,3 +45,6 @@ C:\Users\laule\seminario\EntregaFinal.Net\SGE.Repositorios\obj\Debug\net8.0\SGE.
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.Repositorios\obj\Debug\net8.0\refint\SGE.Repositorios.dll
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.Repositorios\obj\Debug\net8.0\SGE.Repositorios.pdb
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.Repositorios\obj\Debug\net8.0\ref\SGE.Repositorios.dll
+C:\Users\CONSU\proyectosDotnet\EntregaFinal.Net\SGE.Repositorios\obj\Debug\net8.0\SGE.Repositorios.dll
+C:\Users\CONSU\proyectosDotnet\EntregaFinal.Net\SGE.Repositorios\obj\Debug\net8.0\refint\SGE.Repositorios.dll
+C:\Users\CONSU\proyectosDotnet\EntregaFinal.Net\SGE.Repositorios\obj\Debug\net8.0\SGE.Repositorios.pdb

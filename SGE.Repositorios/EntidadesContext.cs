@@ -3,7 +3,7 @@ using SGE.Aplicacion.Entidades;
 
 namespace SGE.Repositorios;
 
-public class EntidadesContext: DbContext
+public class EntidadesContext: DbContext 
 {
     #nullable disable
     public DbSet<Usuario> Usuarios { get; set;}

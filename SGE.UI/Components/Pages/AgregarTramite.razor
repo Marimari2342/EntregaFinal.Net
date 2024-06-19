@@ -1,0 +1,62 @@
+@page "/tramite/{Id:int?}"
+@model MyApp.Namespace.AgregarTramiteModel
+@inject CasoDeUsoTramiteAlta CasoDeUsoTramiteAlta
+@inject CasoDeUsoTramiteModificacion CasoDeUsoTramiteModificacion
+@inject CasoDeUsoExpedienteConsultaPorId CasoDeUsoExpedienteConsultaPorId
+@inject CasoDeUsoObtenerUsuario CasoDeUsoObtenerUsuario
+
+@if (_esNuevoTramite)
+{
+    <h3>Agregando un nuevo Tramite</h3>
+}
+else
+{
+    <h3>Modificando el Tramite con ID"@_Tramite.Id"</h3>
+}
+<p1>ID de Expediente :</p1><input placeholder="ID del Expediente" @bind="_Tramite.ExpedienteId" class="form-control">
+@*Fijarse si se ponia el expediente
+
+<!--aca van las opciones de etiquetas FIJARSE COMO ERRA LA ETIQUETA PARA SELECCIONAR OPCION-->
+
+<button class="btn btn-primary" @onclick="Aceptar">Aceptar</button>*@
+@if (!esCorrecto)
+{ @* error de id Expediente *@
+    <r2 style="color: red; margin-left: 1.2rem;"> <img style="margin-left: 1.2rem;" src="si.png" width="30" height="50">El
+        tramite con id @_Tramite.ExpedienteId No Existe<img style="margin-left: 1.2rem;" src="si.png" width="30"
+            height="50"></r2>
+}
+@code {
+    Tramite _Tramite = new Tramite();
+    bool esCorrecto = true;
+    [Parameter] public int? Id { get; set; }
+    bool _esNuevoTramite = true;
+    protected override void OnParametersSet()
+    {
+        if (Id != null) //si existe el tramite
+        {
+            var exp = CasoDeUsoExpedienteConsultaPorId(Id.Value); //me quedo con el expediente
+            var tram = exp.tramites; //me quedo con la lista de tramites de ese expediente
+            if (tram != null)
+            { 
+                _Tramite = tram;
+                _esNuevoTramite = false;
+            }
+        }
+    }
+   void Aceptar()
+   {
+    esValido=true;
+        if (CasoDeUsoExpedienteConsultaPorId.Ejecutar(_Tramite.ExpedienteId) != null)
+        {
+            if (_esNuevoTramite)
+            {
+                CasoDeUsoTramiteModificacion.Ejecutar(_Tramite);
+            }
+            else
+            {
+                CasoDeUsoTramiteModificacion.Ejecutar(_Tramite);
+            }
+            _Tramite = new Tramite();
+            Navegador.NavigateTo("listadoTramites");
+        }
+    }

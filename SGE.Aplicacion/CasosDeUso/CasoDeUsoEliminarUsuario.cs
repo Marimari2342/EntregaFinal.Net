@@ -1,10 +1,11 @@
-﻿using SGE.Aplicacion.Interfaces;
+﻿using SGE.Aplicacion.Entidades;
+using SGE.Aplicacion.Interfaces;
 namespace SGE.Aplicacion.CasosDeUso;
 
 public class CasoDeUsoEliminarUsuario(IUsuarioRepositorio repositorio):CasoDeUsoUsuario(repositorio)
 {
-    public void Ejecutar(int id)
+    public void Ejecutar(Usuario usuario)
     {
-        Repositorio.EliminarUsuario(id);
+        Repositorio.EliminarUsuario(usuario);
     }
 }

@@ -1,20 +1,37 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.UI\\SGE.UI.csproj": {}
+<<<<<<< HEAD
+    "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.UI\\SGE.UI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj": {
+    "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj",
+        "projectUniqueName": "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj",
         "projectName": "SGE.Aplicacion",
-        "projectPath": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj",
-        "packagesPath": "C:\\Users\\laule\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Aplicacion\\obj\\",
+        "projectPath": "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj",
+        "packagesPath": "C:\\Users\\CONSU\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.Aplicacion\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\laule\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\CONSU\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+    "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.UI\\SGE.UI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj",
+        "projectName": "SGE.Aplicacion",
+        "projectPath": "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj",
+        "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.Aplicacion\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> a3307660f20edbfc6b221c5172a61059da7b55c8
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -58,21 +75,35 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Repositorios\\SGE.Repositorios.csproj": {
+<<<<<<< HEAD
+    "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.Repositorios\\SGE.Repositorios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Repositorios\\SGE.Repositorios.csproj",
+        "projectUniqueName": "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.Repositorios\\SGE.Repositorios.csproj",
         "projectName": "SGE.Repositorios",
-        "projectPath": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Repositorios\\SGE.Repositorios.csproj",
-        "packagesPath": "C:\\Users\\laule\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Repositorios\\obj\\",
+        "projectPath": "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.Repositorios\\SGE.Repositorios.csproj",
+        "packagesPath": "C:\\Users\\CONSU\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.Repositorios\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\laule\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\CONSU\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+    "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.Repositorios\\SGE.Repositorios.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.Repositorios\\SGE.Repositorios.csproj",
+        "projectName": "SGE.Repositorios",
+        "projectPath": "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.Repositorios\\SGE.Repositorios.csproj",
+        "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.Repositorios\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> a3307660f20edbfc6b221c5172a61059da7b55c8
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -84,8 +115,13 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj": {
-                "projectPath": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj"
+<<<<<<< HEAD
+              "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj": {
+                "projectPath": "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj"
+=======
+              "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj": {
+                "projectPath": "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj"
+>>>>>>> a3307660f20edbfc6b221c5172a61059da7b55c8
               }
             }
           }
@@ -126,21 +162,35 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.UI\\SGE.UI.csproj": {
+<<<<<<< HEAD
+    "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.UI\\SGE.UI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.UI\\SGE.UI.csproj",
+        "projectUniqueName": "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.UI\\SGE.UI.csproj",
         "projectName": "SGE.UI",
-        "projectPath": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.UI\\SGE.UI.csproj",
-        "packagesPath": "C:\\Users\\laule\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.UI\\obj\\",
+        "projectPath": "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.UI\\SGE.UI.csproj",
+        "packagesPath": "C:\\Users\\CONSU\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.UI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\laule\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\CONSU\\AppData\\Roaming\\NuGet\\NuGet.Config"
+=======
+    "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.UI\\SGE.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.UI\\SGE.UI.csproj",
+        "projectName": "SGE.UI",
+        "projectPath": "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.UI\\SGE.UI.csproj",
+        "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.UI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config"
+>>>>>>> a3307660f20edbfc6b221c5172a61059da7b55c8
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -152,11 +202,19 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj": {
-                "projectPath": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj"
+<<<<<<< HEAD
+              "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj": {
+                "projectPath": "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj"
               },
-              "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Repositorios\\SGE.Repositorios.csproj": {
-                "projectPath": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Repositorios\\SGE.Repositorios.csproj"
+              "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.Repositorios\\SGE.Repositorios.csproj": {
+                "projectPath": "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.Repositorios\\SGE.Repositorios.csproj"
+=======
+              "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj": {
+                "projectPath": "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj"
+              },
+              "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.Repositorios\\SGE.Repositorios.csproj": {
+                "projectPath": "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.Repositorios\\SGE.Repositorios.csproj"
+>>>>>>> a3307660f20edbfc6b221c5172a61059da7b55c8
               }
             }
           }
@@ -194,7 +252,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

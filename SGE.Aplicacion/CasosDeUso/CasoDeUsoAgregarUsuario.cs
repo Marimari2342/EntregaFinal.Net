@@ -1,7 +1,7 @@
 ﻿using SGE.Aplicacion.Entidades;
 using SGE.Aplicacion.Interfaces;
 namespace SGE.Aplicacion.CasosDeUso;
-public class CasoDeUsoAgregarUsuario(IUsuarioRepositorio repositorio, IHashService servicio ):CasoDeusoUsuario(repositorio)
+public class CasoDeUsoAgregarUsuario(IUsuarioRepositorio repositorio, IHashService servicio ):CasoDeUsoUsuario(repositorio)
 {
 
     public void Ejecutar(Usuario usuario)
@@ -12,6 +12,6 @@ public class CasoDeUsoAgregarUsuario(IUsuarioRepositorio repositorio, IHashServi
         usuario.SalContraseña = salt;
         usuario.Contraseña = ""; // Limpiar la contraseña original
 
-        repositorio.AgregarUsuario(usuario);
+        Repositorio.AgregarUsuario(usuario);
     }
 }

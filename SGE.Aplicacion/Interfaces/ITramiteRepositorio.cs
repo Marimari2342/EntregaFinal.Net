@@ -10,6 +10,6 @@ public interface ITramiteRepositorio
     List<Tramite> ListarPorIdExpediente(int id);
     List<Tramite> ListarPorEtiqueta(EtiquetaTramite etiqueta);
     List<Tramite> ListarTramite();
-    Tramite ObtenerPorId(int id);
+    Tramite? ObtenerPorId(int id);
 
 }

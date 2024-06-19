@@ -20,7 +20,7 @@ builder.Services.AddTransient<CasoDeUsoAgregarUsuario>();
 builder.Services.AddTransient<CasoDeUsoListarUsuarios>();
 builder.Services.AddTransient<CasosDeUsoModificarUsuario>();
 builder.Services.AddTransient<CasoDeUsoEliminarUsuario>();
-builder.Services.AddTransient<CasoDeUsoModificarPermisos>();
+builder.Services.AddTransient<CasosDeUsoModificarPermisos>();
 
 builder.Services.AddTransient<CasoDeUsoExpedienteAlta>();
 builder.Services.AddTransient<CasoDeUsoExpedienteBaja>();

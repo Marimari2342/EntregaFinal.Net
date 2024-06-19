@@ -29,3 +29,19 @@ D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.Repositorios\
 D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.Repositorios\obj\Debug\net8.0\refint\SGE.Repositorios.dll
 D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.Repositorios\obj\Debug\net8.0\SGE.Repositorios.pdb
 D:\Universidad\Segundo año\.Net\EntregaFinal\EntregaFinal.Net\SGE.Repositorios\obj\Debug\net8.0\ref\SGE.Repositorios.dll
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.Repositorios\bin\Debug\net8.0\SGE.Repositorios.deps.json
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.Repositorios\bin\Debug\net8.0\SGE.Repositorios.dll
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.Repositorios\bin\Debug\net8.0\SGE.Repositorios.pdb
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.Repositorios\bin\Debug\net8.0\SGE.Aplicacion.dll
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.Repositorios\bin\Debug\net8.0\SGE.Aplicacion.pdb
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.Repositorios\obj\Debug\net8.0\SGE.Repositorios.csproj.AssemblyReference.cache
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.Repositorios\obj\Debug\net8.0\SGE.Repositorios.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.Repositorios\obj\Debug\net8.0\SGE.Repositorios.AssemblyInfoInputs.cache
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.Repositorios\obj\Debug\net8.0\SGE.Repositorios.AssemblyInfo.cs
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.Repositorios\obj\Debug\net8.0\SGE.Repositorios.csproj.CoreCompileInputs.cache
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.Repositorios\obj\Debug\net8.0\SGE.Repositorios.sourcelink.json
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.Repositorios\obj\Debug\net8.0\SGE.Repo.5B6658F4.Up2Date
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.Repositorios\obj\Debug\net8.0\SGE.Repositorios.dll
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.Repositorios\obj\Debug\net8.0\refint\SGE.Repositorios.dll
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.Repositorios\obj\Debug\net8.0\SGE.Repositorios.pdb
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.Repositorios\obj\Debug\net8.0\ref\SGE.Repositorios.dll

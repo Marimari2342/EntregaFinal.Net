@@ -1221,34 +1221,19 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\CONSU\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\maria\\.nuget\\packages\\": {}
->>>>>>> a3307660f20edbfc6b221c5172a61059da7b55c8
+    "C:\\Users\\laule\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.UI\\SGE.UI.csproj",
+      "projectUniqueName": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.UI\\SGE.UI.csproj",
       "projectName": "SGE.UI",
-      "projectPath": "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.UI\\SGE.UI.csproj",
-      "packagesPath": "C:\\Users\\CONSU\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.UI\\obj\\",
+      "projectPath": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.UI\\SGE.UI.csproj",
+      "packagesPath": "C:\\Users\\laule\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.UI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\CONSU\\AppData\\Roaming\\NuGet\\NuGet.Config"
-=======
-      "projectUniqueName": "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.UI\\SGE.UI.csproj",
-      "projectName": "SGE.UI",
-      "projectPath": "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.UI\\SGE.UI.csproj",
-      "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.UI\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config"
->>>>>>> a3307660f20edbfc6b221c5172a61059da7b55c8
+        "C:\\Users\\laule\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -1260,19 +1245,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-<<<<<<< HEAD
-            "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj": {
-              "projectPath": "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj"
+            "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj": {
+              "projectPath": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj"
             },
-            "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.Repositorios\\SGE.Repositorios.csproj": {
-              "projectPath": "C:\\Users\\CONSU\\proyectosDotnet\\EntregaFinal.Net\\SGE.Repositorios\\SGE.Repositorios.csproj"
-=======
-            "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj": {
-              "projectPath": "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.Aplicacion\\SGE.Aplicacion.csproj"
-            },
-            "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.Repositorios\\SGE.Repositorios.csproj": {
-              "projectPath": "C:\\Users\\maria\\Downloads\\Ultimo\\EntregaFinal.Net\\SGE.Repositorios\\SGE.Repositorios.csproj"
->>>>>>> a3307660f20edbfc6b221c5172a61059da7b55c8
+            "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Repositorios\\SGE.Repositorios.csproj": {
+              "projectPath": "C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.Repositorios\\SGE.Repositorios.csproj"
             }
           }
         }
@@ -1310,8 +1287,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\laule\\seminario\\EntregaFinal.Net\\SGE.UI\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

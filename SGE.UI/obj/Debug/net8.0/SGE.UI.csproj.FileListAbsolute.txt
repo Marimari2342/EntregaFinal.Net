@@ -128,3 +128,6 @@ C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\refint\SGE.UI.
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.pdb
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.genruntimeconfig.cache
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\ref\SGE.UI.dll
+C:\Users\maria\Downloads\Ultimo\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.dll
+C:\Users\maria\Downloads\Ultimo\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\refint\SGE.UI.dll
+C:\Users\maria\Downloads\Ultimo\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.pdb

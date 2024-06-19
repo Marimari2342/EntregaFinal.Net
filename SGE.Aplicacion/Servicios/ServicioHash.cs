@@ -13,44 +13,53 @@ desarrollados por la Agencia de Seguridad Nacional (NSA) de los Estados Unidos.
 "SHA" se refiere a Secure Hash Algorithm, y el número "256" indica la longitud del hash que produce: 256 bits. */
 
 public class HashService : IHashService
-{
-    public (string Hash, string Salt) CreateHash(string password)
     {
-        // Generate a salt
-        byte[] salt = new byte[16];
-        using (var rng = RandomNumberGenerator.Create())
+        // Método para crear un hash y una sal a partir de una contraseña
+        public (string Hash, string Salt) CreateHash(string password)
         {
-            rng.GetBytes(salt);
+            // Generar una sal aleatoria de 16 bytes
+            byte[] salt = new byte[16];
+            using (var rng = RandomNumberGenerator.Create())
+            {
+                rng.GetBytes(salt);
+            }
+
+            // Combinar la contraseña con la sal
+            var combined = Combine(Encoding.UTF8.GetBytes(password), salt);
+
+            // Calcular el hash SHA-256 de la combinación de contraseña y sal
+            using (var sha256 = SHA256.Create())
+            {
+                byte[] hash = sha256.ComputeHash(combined);
+                return (Convert.ToBase64String(hash), Convert.ToBase64String(salt));
+            }
         }
 
-        // Combine password and salt
-        var combined = Combine(Encoding.UTF8.GetBytes(password), salt);
-
-        // Hash the combined password and salt
-        using (var sha256 = SHA256.Create())
+        // Método para verificar si una contraseña coincide con un hash y una sal dados
+        public bool VerifyHash(string password, string hash, string salt)
         {
-            byte[] hash = sha256.ComputeHash(combined);
-            return (Convert.ToBase64String(hash), Convert.ToBase64String(salt));
+            // Convertir la sal de Base64 a bytes
+            byte[] saltBytes = Convert.FromBase64String(salt);
+
+            // Combinar la contraseña con la sal almacenada
+            var combined = Combine(Encoding.UTF8.GetBytes(password), saltBytes);
+
+            // Calcular el hash SHA-256 de la combinación de contraseña y sal
+            using (var sha256 = SHA256.Create())
+            {
+                byte[] computedHash = sha256.ComputeHash(combined);
+
+                // Convertir el hash calculado a Base64 y compararlo con el hash almacenado
+                return Convert.ToBase64String(computedHash) == hash;
+            }
+        }
+
+        // Método privado para combinar dos arrays de bytes
+        private byte[] Combine(byte[] first, byte[] second)
+        {
+            byte[] ret = new byte[first.Length + second.Length];
+            Buffer.BlockCopy(first, 0, ret, 0, first.Length);
+            Buffer.BlockCopy(second, 0, ret, first.Length, second.Length);
+            return ret;
         }
     }
-
-    public bool VerifyHash(string password, string hash, string salt)
-    {
-        byte[] saltBytes = Convert.FromBase64String(salt);
-        var combined = Combine(Encoding.UTF8.GetBytes(password), saltBytes);
-
-        using (var sha256 = SHA256.Create())
-        {
-            byte[] computedHash = sha256.ComputeHash(combined);
-            return Convert.ToBase64String(computedHash) == hash;
-        }
-    }
-
-    private byte[] Combine(byte[] first, byte[] second)
-    {
-        byte[] ret = new byte[first.Length + second.Length];
-        Buffer.BlockCopy(first, 0, ret, 0, first.Length);
-        Buffer.BlockCopy(second, 0, ret, first.Length, second.Length);
-        return ret;
-    }
-}

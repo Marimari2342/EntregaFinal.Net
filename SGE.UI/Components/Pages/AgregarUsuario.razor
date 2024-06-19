@@ -1,0 +1,62 @@
+@page "/Usuario/{id:int?}"
+@model MyApp.Namespace.AgregarUsuarioModel
+@inject NavigationManager Navegador;
+@inject CasoDeUsoAgregarUsuario CasoDeUsoAgregarUsuario
+@inject CasoDeUsoModificarUsuario CasoDeUsoModificarUsuario
+@inject GetTitularUseCase GetTitularUseCase
+
+
+@if (_esNuevoUsuario)
+{
+    <h3>Agregando un nuevo Usuario</h3>
+}
+else
+{
+    <h3>Modificando el Usuario</h3>
+}
+
+<p1>Nombre :</p1><input placeholder="Nombre" @bind="_titular.Nombre" class="form-control">
+<p1>Apellido :</p1><input placeholder="Apellido"
+@bind="_titular.Apellido" class="form-control">
+<p1>Email :</p1><input placeholder="Email" @bind="_titular.Email" class="form-control">
+
+
+<button class="btn btn-primary" @onclick="Aceptar">Aceptar</button>
+
+@code {
+    Usuario _usuario= new Usuario();
+
+    [Parameter] public int? Id { get; set; } //se usa para identificar si estamos editando usu existente  o creando uno nuevo
+
+    bool _esNuevoUsuario = true; //nuevoUsuario = true; editando = false
+    protected override void OnParametersSet() //se ejecuta cuando los parámetros son establecidos
+    {
+        if (Id != null) //si no es nulo nos traemos el id con el obtener usuario
+        {
+            var usu = CasoDeUsuarioObtenerUsuario.Ejecutar(Id.Value);
+            if (usu != null) //si el usuario existe ya
+            {
+                emailAntiguo = usu.Email;
+                nombreAntiguo = usu.Nombre;
+                apellidoAntiguo = usu.Apellido;
+                _usuario = usu; //nos guardamos el usuario encontrrado
+                _esNuevoUsuario = false; //como no es nuevo lo ponemos el false
+            }
+        }
+    }
+    void Aceptar() //es para guardar cambios
+    {
+        if (_esNuevoUsuario) //si estamos creando un usuario
+        {
+            CasoDeUsoAgregarUsuario.Ejecutar(_usuario); //agregamos Usuario
+            _usuario = new Usuairo(); //resetea usuario
+            Navegador.NavigateTo("listadoUsuarios"); //navega a listadoUsuarios
+        }
+        else
+        {
+            CasoDeUsoModificarUsuario(_usuario);
+            _usuario = new Usuario();
+            Navegador.NavigateTo("listadoUsuarios");
+        }
+    }  
+}

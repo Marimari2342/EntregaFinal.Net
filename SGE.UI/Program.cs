@@ -1,6 +1,9 @@
 using SGE.UI.Components;
+using SGE.Repositorios;
 
 var builder = WebApplication.CreateBuilder(args);
+
+EntidadesSqlite.Inicializar();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()

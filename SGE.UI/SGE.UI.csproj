@@ -11,4 +11,12 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Components\Pages\AgregarUsuario.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Components\Pages\AgregarUsuario.cshtml" />
+  </ItemGroup>
+
 </Project>

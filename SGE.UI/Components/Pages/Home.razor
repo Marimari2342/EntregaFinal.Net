@@ -11,8 +11,7 @@
 </div>
 
 @code {
-    [Inject] NavigationManager NavigationManager { get; set; }
-
+    [Inject] private NavigationManager NavigationManager { get; set; } = null!;
     private void NavigateToRegistro()
     {
         NavigationManager.NavigateTo("/Usuario"); // Redirige a la página de registro de usuarios

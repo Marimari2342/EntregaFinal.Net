@@ -1,8 +1,7 @@
+namespace SGE.Aplicacion.CasosDeUso;
 using SGE.Aplicacion.Entidades;
 using SGE.Aplicacion.Enumerativos;
 using SGE.Aplicacion.Interfaces;
-
-namespace SGE.Aplicacion.CasosDeUso;
 
 public class CasosDeUsoModificarPermisos(IUsuarioRepositorio repositorio):CasoDeUsoUsuario(repositorio)
 {

@@ -1,7 +1,20 @@
 ﻿@page "/"
+@using Microsoft.AspNetCore.Components.Web
+@namespace SGE.UI.Pages
 
-<PageTitle>Home</PageTitle>
+<h1>Bienvenido</h1>
 
-<h1>Hello, world!</h1>
+<div class="container">
+    <p>Ingrese opción deseada:</p>
+    <button @onclick="NavigateToRegistro" class="btn btn-primary">Iniciar sesión</button>
+    <button @onclick="NavigateToRegistro" class="btn btn-primary">Registrarse</button>
+</div>
 
-Welcome to your new app.
+@code {
+    [Inject] NavigationManager NavigationManager { get; set; }
+
+    private void NavigateToRegistro()
+    {
+        NavigationManager.NavigateTo("/Usuario"); // Redirige a la página de registro de usuarios
+    }
+}

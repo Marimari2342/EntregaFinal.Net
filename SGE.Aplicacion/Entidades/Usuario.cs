@@ -1,7 +1,6 @@
-using SGE.Aplicacion.Enumerativos;
 
 namespace SGE.Aplicacion.Entidades;
-
+using SGE.Aplicacion.Enumerativos;
 public class Usuario
 {
     public int Id { get; set;}

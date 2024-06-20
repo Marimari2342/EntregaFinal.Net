@@ -1,3 +1,10 @@
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.csproj.AssemblyReference.cache
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.AssemblyInfoInputs.cache
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.AssemblyInfo.cs
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.csproj.CoreCompileInputs.cache
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.sourcelink.json
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\appsettings.json
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\SGE.UI.staticwebassets.runtime.json
@@ -39,13 +46,6 @@ C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\SGE.Aplicacion
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\SGE.Repositorios.dll
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\SGE.Aplicacion.pdb
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\bin\Debug\net8.0\SGE.Repositorios.pdb
-C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.csproj.AssemblyReference.cache
-C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.AssemblyInfoInputs.cache
-C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.AssemblyInfo.cs
-C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.csproj.CoreCompileInputs.cache
-C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.sourcelink.json
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\staticwebassets\msbuild.SGE.UI.Microsoft.AspNetCore.StaticWebAssets.props
@@ -63,3 +63,5 @@ C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\refint\SGE.UI.
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.pdb
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.genruntimeconfig.cache
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\ref\SGE.UI.dll
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.RazorAssemblyInfo.cache
+C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.RazorAssemblyInfo.cs

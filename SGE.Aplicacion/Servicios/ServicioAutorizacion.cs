@@ -1,7 +1,8 @@
-﻿using SGE.Aplicacion.Enumerativos;
-using SGE.Aplicacion.Interfaces;
+﻿
 namespace SGE.Aplicacion.Servicios;
 using SGE.Aplicacion.Entidades;
+using SGE.Aplicacion.Enumerativos;
+using SGE.Aplicacion.Interfaces;
     public class ServicioAutorizacion : IServicioAutorizacion
     {
         private readonly IUsuarioRepositorio _usuarioRepositorio;

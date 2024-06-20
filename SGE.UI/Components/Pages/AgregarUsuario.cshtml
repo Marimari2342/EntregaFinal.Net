@@ -3,8 +3,7 @@
 @inject NavigationManager Navegador;
 @inject CasoDeUsoAgregarUsuario CasoDeUsoAgregarUsuario
 @inject CasoDeUsoModificarUsuario CasoDeUsoModificarUsuario
-@inject GetTitularUseCase GetTitularUseCase
-@inject HashService HashService // Inyectar el servicio de hash
+@inject HashService hashService;
 
 @if (_esNuevoUsuario){
     <h3>Agregando un nuevo Usuario</h3>
@@ -29,11 +28,12 @@ else {
     [Parameter] public int? Id { get; set; } // Se usa para identificar si estamos editando usuario existente o creando uno nuevo
 
     bool _esNuevoUsuario = true; // nuevoUsuario = true; editando = false
-    protected override void OnParametersSet() // Se ejecuta cuando los parámetros son establecidos
+
+    void OnInitialized()
     {
         if (Id != null) // Si no es nulo, nos traemos el ID con el obtener usuario
         {
-            var usu = CasoDeUsuarioObtenerUsuario.Ejecutar(Id.Value);
+            var usu = CasoDeUsoObtenerUsuario.Ejecutar(Id.Value);
             if (usu != null) // Si el usuario existe ya
             {
                 emailAntiguo = usu.Email;
@@ -51,18 +51,18 @@ else {
         {
             CasoDeUsoAgregarUsuario.Ejecutar(_usuario); // Agregamos usuario
             _usuario = new Usuario(); // Resetea usuario
-            Navegador.NavigateTo("listadoUsuarios"); // Navega a listadoUsuarios
+            Navegador.NavigateTo("/listadousuarios"); // Navega a listadoUsuarios
         }
         else
         {
-            if (!HashService.VerifyPassword(_password, _usuario.Hash, _usuario.Sal)) // Verificar la contraseña
+         if (!HashService.VerifyPassword(_password, _usuario.Hash, _usuario.Sal)) // Verificar la contraseña
             {
-                throw new Exception("La contraseña es incorrecta. Por favor, comuníquese con el soporte técnico.");
+              throw new Exception("La contraseña es incorrecta. Por favor, comuníquese con el soporte técnico.");
             }
 
             CasoDeUsoModificarUsuario.Ejecutar(_usuario);
             _usuario = new Usuario();
-            Navegador.NavigateTo("listadoUsuarios");
+            Navegador.NavigateTo("/listadousuarios");
         }
     }
 }

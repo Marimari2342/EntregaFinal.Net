@@ -1,6 +1,5 @@
-﻿using SGE.Aplicacion.Interfaces;
-namespace SGE.Aplicacion.CasosDeUso;
-
+﻿namespace SGE.Aplicacion.CasosDeUso;
+using SGE.Aplicacion.Interfaces;
 public abstract class CasoDeUsoUsuario
 {   
      protected IUsuarioRepositorio Repositorio { get; private set;} 

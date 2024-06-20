@@ -1,7 +1,7 @@
-﻿using SGE.Aplicacion.Entidades;
-using SGE.Aplicacion.Enumerativos;
+﻿
 namespace SGE.Aplicacion.Interfaces;
-
+using SGE.Aplicacion.Entidades;
+using SGE.Aplicacion.Enumerativos;
 public interface IUsuarioRepositorio
 {
     List<Usuario> GetUsuarios();

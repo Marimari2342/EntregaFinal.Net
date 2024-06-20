@@ -1,7 +1,7 @@
-﻿using SGE.Aplicacion.Enumerativos;
-using SGE.Aplicacion.Interfaces;
+﻿
 namespace SGE.Aplicacion.Servicios;
-
+using SGE.Aplicacion.Enumerativos;
+using SGE.Aplicacion.Interfaces;
 public class EspecificacionCambioEstado: IEspecificacionCambioEstado
 {
      public EstadoExpediente ObtenerNuevoEstado(EtiquetaTramite etiquetaTramite, EstadoExpediente estadoActual)

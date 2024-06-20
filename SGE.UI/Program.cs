@@ -1,13 +1,13 @@
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Web;
-using SGE.UI.Data;
-
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using SGE.UI.Components;
-using SGE.Repositorios;
+using SGE.UI.Data;
 using SGE.Aplicacion.CasosDeUso;
-using SGE.Aplicacion.Servicios;
 using SGE.Aplicacion.Interfaces;
-using SGE.Aplicacion;
+using SGE.Aplicacion.Servicios;
+using SGE.Repositorios;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,8 +20,6 @@ builder.Services.AddRazorComponents()
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
-
-//add Servicios para la app
 
 builder.Services.AddTransient<CasoDeUsoObtenerUsuario>();
 builder.Services.AddTransient<CasoDeUsoAgregarUsuario>();
@@ -45,12 +43,10 @@ builder.Services.AddSingleton<IUsuarioRepositorio, UsuarioRepositorioSQL>();
 builder.Services.AddSingleton<ITramiteRepositorio, TramiteRepositorioSQL>();
 builder.Services.AddSingleton<IExpedienteRepositorio, ExpedienteRepositorioSQL>();
 
-
-builder.Services.AddTransient<IHashService, HashService>();
 builder.Services.AddTransient<IServicioAutorizacion, ServicioAutorizacion>();
 builder.Services.AddTransient<IEspecificacionCambioEstado, EspecificacionCambioEstado>();
 builder.Services.AddTransient<ServicioActualizacionEstado>();
-
+builder.Services.AddTransient<IHashService, HashService>();
 
 
 var app = builder.Build();

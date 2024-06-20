@@ -1,4 +1,4 @@
-@page "/Usuario/{id:int?}"
+﻿@page "/Usuario/{id:int?}"
 @model MyApp.Namespace.AgregarUsuarioModel
 @inject NavigationManager Navegador;
 @inject CasoDeUsoAgregarUsuario CasoDeUsoAgregarUsuario
@@ -6,18 +6,15 @@
 @inject GetTitularUseCase GetTitularUseCase
 
 
-@if (_esNuevoUsuario)
-{
+@if (_esNuevoUsuario){
     <h3>Agregando un nuevo Usuario</h3>
 }
-else
-{
+else {
     <h3>Modificando el Usuario</h3>
 }
 
 <p1>Nombre :</p1><input placeholder="Nombre" @bind="_titular.Nombre" class="form-control">
-<p1>Apellido :</p1><input placeholder="Apellido"
-@bind="_titular.Apellido" class="form-control">
+<p1>Apellido :</p1><input placeholder="Apellido" @bind="_titular.Apellido" class="form-control">
 <p1>Email :</p1><input placeholder="Email" @bind="_titular.Email" class="form-control">
 
 
@@ -44,19 +41,19 @@ else
             }
         }
     }
-    void Aceptar() //es para guardar cambios
-    {
-        if (_esNuevoUsuario) //si estamos creando un usuario
-        {
+   void Aceptar() //es para guardar cambios
+   {
+       if (_esNuevoUsuario) //si estamos creando un usuario
+       {
             CasoDeUsoAgregarUsuario.Ejecutar(_usuario); //agregamos Usuario
             _usuario = new Usuairo(); //resetea usuario
             Navegador.NavigateTo("listadoUsuarios"); //navega a listadoUsuarios
-        }
-        else
-        {
+       }
+       else
+       {
             CasoDeUsoModificarUsuario(_usuario);
             _usuario = new Usuario();
             Navegador.NavigateTo("listadoUsuarios");
-        }
-    }  
+       }
+   }  
 }

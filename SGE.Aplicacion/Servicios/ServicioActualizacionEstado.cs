@@ -7,13 +7,13 @@ public class ServicioActualizacionEstado (IEspecificacionCambioEstado _especific
     public void ActualizarEstado(int id)
     {
 
-        Expediente expediente = _expedienteRepositorio.ObtenerPorId(id);
+        Expediente? expediente = _expedienteRepositorio.ObtenerPorId(id);
+        if (expediente!=null){  
         expediente.Tramites = _tramiteRepositorio.ListarPorIdExpediente(id);
         Tramite ultimoTramite = expediente.Tramites[expediente.Tramites.Count - 1];
         expediente.Estado = _especificacion.ObtenerNuevoEstado(ultimoTramite.Etiqueta, expediente.Estado);
-        bool ok;
-        _expedienteRepositorio.Modificar(expediente,out ok);
-
+        _expedienteRepositorio.Modificar(expediente);
+        }
     }
 
 }

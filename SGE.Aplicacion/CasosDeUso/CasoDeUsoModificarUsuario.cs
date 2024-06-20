@@ -3,7 +3,7 @@ using SGE.Aplicacion.Interfaces;
 
 namespace SGE.Aplicacion.CasosDeUso;
 
-public class CasosDeUsoModificarUsuario(IUsuarioRepositorio repositorio):CasoDeUsoUsuario(repositorio)
+public class CasoDeUsoModificarUsuario(IUsuarioRepositorio repositorio):CasoDeUsoUsuario(repositorio)
 {
     public void Ejecutar(Usuario usuario)
     {

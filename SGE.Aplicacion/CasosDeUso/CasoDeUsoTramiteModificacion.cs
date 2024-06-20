@@ -20,22 +20,21 @@ public class CasoDeUsoTramiteModificacion (ITramiteRepositorio _tramiteRepositor
                     throw new ValidacionException(mensajeError);
                 }
                 else{
-
                     // Asignar fecha de modificación
                     tramite.UltimaModificacion = DateTime.Now;
                     // Guardar tramite en el repositorio
-                    bool ok;
-                    _tramiteRepositorio.Modificar(tramite, out ok);
-                    if (ok){
-                        Tramite aux = _tramiteRepositorio.ObtenerPorId(tramite.Id); 
+                    var aux=_tramiteRepositorio.ObtenerPorId(tramite.Id);
+                    
+                    if (aux != null ){
+                        tramite.ExpedienteId=aux.ExpedienteId;
+                        tramite.FechaCreacion=aux.FechaCreacion;
+                         _tramiteRepositorio.Modificar(tramite);
                         //Actualizar estado del expediente
                         actualizar.ActualizarEstado(aux.ExpedienteId);
                     }
                     else{
                         throw new RepositorioException("El trámite con el id ingresado no existe.");
                     }
-                    
-
                 }
             }
              else{

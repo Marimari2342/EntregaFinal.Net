@@ -4,10 +4,10 @@ namespace SGE.Aplicacion.Interfaces;
 public interface IExpedienteRepositorio
 {
     void Agregar(Expediente expediente);
-    void Eliminar(int id, out bool ok);
-    void Modificar(Expediente expediente, out bool ok);
-    Expediente ObtenerPorId(int id);
+    void Eliminar(Expediente expediente);
+    void Modificar(Expediente expediente);
+    Expediente? ObtenerPorId(int id);
     List <Expediente> ObtenerTodos();
-    int ObtenerSiguienteId();
+
 
 }

@@ -1,0 +1,68 @@
+﻿@page "/Usuario/{id:int?}"
+@model MyApp.Namespace.AgregarUsuarioModel
+@inject NavigationManager Navegador;
+@inject CasoDeUsoAgregarUsuario CasoDeUsoAgregarUsuario
+@inject CasoDeUsoModificarUsuario CasoDeUsoModificarUsuario
+@inject GetTitularUseCase GetTitularUseCase
+@inject HashService HashService // Inyectar el servicio de hash
+
+@if (_esNuevoUsuario){
+    <h3>Agregando un nuevo Usuario</h3>
+}
+else {
+    <h3>Modificando el Usuario</h3>
+}
+
+<p>Nombre :</p><input placeholder="Nombre" @bind="_usuario.Nombre" class="form-control">
+<p>Apellido :</p><input placeholder="Apellido" @bind="_usuario.Apellido" class="form-control">
+<p>Email :</p><input placeholder="Email" @bind="_usuario.Email" class="form-control">
+@if (!_esNuevoUsuario) {
+    <p>Contraseña :</p><input placeholder="Contraseña" @bind="_password" type="password" class="form-control">
+}
+
+<button class="btn btn-primary" @onclick="Aceptar">Aceptar</button>
+
+@code {
+    Usuario _usuario = new Usuario();
+    string _password = string.Empty;
+
+    [Parameter] public int? Id { get; set; } // Se usa para identificar si estamos editando usuario existente o creando uno nuevo
+
+    bool _esNuevoUsuario = true; // nuevoUsuario = true; editando = false
+    protected override void OnParametersSet() // Se ejecuta cuando los parámetros son establecidos
+    {
+        if (Id != null) // Si no es nulo, nos traemos el ID con el obtener usuario
+        {
+            var usu = CasoDeUsuarioObtenerUsuario.Ejecutar(Id.Value);
+            if (usu != null) // Si el usuario existe ya
+            {
+                emailAntiguo = usu.Email;
+                nombreAntiguo = usu.Nombre;
+                apellidoAntiguo = usu.Apellido;
+                _usuario = usu; // Nos guardamos el usuario encontrado
+                _esNuevoUsuario = false; // Como no es nuevo, lo ponemos en false
+            }
+        }
+    }
+
+    void Aceptar() // Es para guardar cambios
+    {
+        if (_esNuevoUsuario) // Si estamos creando un usuario
+        {
+            CasoDeUsoAgregarUsuario.Ejecutar(_usuario); // Agregamos usuario
+            _usuario = new Usuario(); // Resetea usuario
+            Navegador.NavigateTo("listadoUsuarios"); // Navega a listadoUsuarios
+        }
+        else
+        {
+            if (!HashService.VerifyPassword(_password, _usuario.Hash, _usuario.Sal)) // Verificar la contraseña
+            {
+                throw new Exception("La contraseña es incorrecta. Por favor, comuníquese con el soporte técnico.");
+            }
+
+            CasoDeUsoModificarUsuario.Ejecutar(_usuario);
+            _usuario = new Usuario();
+            Navegador.NavigateTo("listadoUsuarios");
+        }
+    }
+}

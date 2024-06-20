@@ -9,23 +9,21 @@ public class CasoDeUsoExpedienteModificacion(IExpedienteRepositorio expedienteRe
 {
     public void Ejecutar(Expediente expediente,int idUsuario)
     { 
-        //hyyyyyyyyyy
+
             if(_servicioAutorizacion.PoseeElPermiso(idUsuario, Permiso.ExpedienteModificacion)){
                 expediente.IdUsuarioUltimaModificacion=idUsuario;
                 string mensajeError;
                 if (ExpedienteValidador.Validar(expediente, out mensajeError)){
-                // Asignar fecha de modificación
-                expediente.UltimaModificacion = DateTime.Now;
-                Expediente aux = expedienteRepositorio.ObtenerPorId(expediente.Id);
-                expediente.Estado = aux.Estado;
-                bool ok;
-                expedienteRepositorio.Modificar(expediente,out ok);  
-                if(!ok){
-                    throw new RepositorioException("El expediente con el id ingresado no existe");
+                    // Asignar fecha de modificación
+                    expediente.UltimaModificacion = DateTime.Now;
+                    Expediente? aux = expedienteRepositorio.ObtenerPorId(expediente.Id);
+                    if(aux!=null){ 
+                         expediente.Estado = aux.Estado;
+                        expedienteRepositorio.Modificar(expediente);
+                    }  
                 }
-                }   
-                 else{
-                throw new ValidacionException(mensajeError);
+                else{
+                    throw new ValidacionException(mensajeError);
                 }
             }
             else{

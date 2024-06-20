@@ -12,21 +12,6 @@ namespace SGE.Repositorios
             {
                 Console.WriteLine("Se creó la base de datos");
             }
-
-            var connection = context.Database.GetDbConnection();
-            connection.Open();
-            try
-            {
-                using (var command = connection.CreateCommand())
-                {
-                    command.CommandText = "PRAGMA journal_mode=DELETE;";
-                    command.ExecuteNonQuery();
-                }
-            }
-            finally
-            {
-                connection.Close();
-            }
         }
     }
 }

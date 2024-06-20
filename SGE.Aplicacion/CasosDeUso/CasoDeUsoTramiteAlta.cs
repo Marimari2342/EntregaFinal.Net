@@ -16,8 +16,6 @@ public class CasoDeUsoTramiteAlta(ITramiteRepositorio tramiteRepositorio,IServic
                 string mensajeError;
                 // Validar tramite
                 if(TramiteValidador.Validar(tramite, out mensajeError)){ 
-                    // Asignar Id 
-                    tramite.Id = tramiteRepositorio.ObtenerSiguienteId(); 
                     // Asignar fecha de creación y modificación
                     tramite.FechaCreacion = DateTime.Now;
                     tramite.UltimaModificacion = DateTime.Now;

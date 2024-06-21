@@ -1,7 +1,7 @@
-﻿using SGE.Aplicacion.Enumerativos;
+﻿namespace SGE.Aplicacion.CasosDeUso;
+using SGE.Aplicacion.Enumerativos;
 using SGE.Aplicacion.Interfaces;
 using SGE.Aplicacion.Excepciones;
-namespace SGE.Aplicacion.CasosDeUso;
 
 public class CasoDeUsoExpedienteBaja(IServicioAutorizacion servicioAutorizacion,IExpedienteRepositorio expedienteRepositorio)
 {

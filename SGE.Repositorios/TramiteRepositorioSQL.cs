@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore;
 using System.Collections.ObjectModel;
 using SGE.Aplicacion.CasosDeUso;
 using SGE.Aplicacion.Enumerativos;
-
 public class TramiteRepositorioSQL: ITramiteRepositorio
 {
     static TramiteRepositorioSQL(){

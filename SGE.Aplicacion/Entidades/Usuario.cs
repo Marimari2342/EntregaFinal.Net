@@ -1,7 +1,6 @@
-using SGE.Aplicacion.Enumerativos;
 
 namespace SGE.Aplicacion.Entidades;
-
+using SGE.Aplicacion.Enumerativos;
 public class Usuario
 {
     public int Id { get; set;}
@@ -9,7 +8,6 @@ public class Usuario
 
     public string Apellido{ get; set;}="";
     public string CorreoElectronico { get; set;}="";
-    public string Contraseña { get; set;}=""; //Me parece que no deberíamos guardar la contraseña sino el Hash y sal nomás.
 
     // Nuevos campos para almacenar el hash y la sal de la contraseña
     public string HashContraseña { get; set; } = "";

@@ -1,8 +1,7 @@
-﻿using System;
+﻿namespace SGE.Repositorios;
+using System;
 using Microsoft.EntityFrameworkCore;
 
-namespace SGE.Repositorios
-{
     public class EntidadesSqlite
     {
         public static void Inicializar()
@@ -14,4 +13,3 @@ namespace SGE.Repositorios
             }
         }
     }
-}

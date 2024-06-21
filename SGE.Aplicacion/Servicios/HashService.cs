@@ -1,6 +1,7 @@
-﻿namespace SGE.Aplicacion;
+﻿namespace SGE.Aplicacion.Servicios;
 using System.Security.Cryptography;
 using System.Text;
+using SGE.Aplicacion.Interfaces;
 
 /*El sistema toma esa contraseña, le agrega una especie de "algo" único y aleatorio (llamado sal), 
 y luego convierte toda esa mezcla en una serie de letras y números que no se parece en nada a la contraseña original. 

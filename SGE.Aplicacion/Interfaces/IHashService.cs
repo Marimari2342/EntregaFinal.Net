@@ -1,4 +1,5 @@
-﻿namespace SGE.Aplicacion;
+﻿
+namespace SGE.Aplicacion.Interfaces;
 
 public interface IHashService
 {

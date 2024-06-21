@@ -1,0 +1,75 @@
+﻿@page "/IniciarSesion"
+@rendermode InteractiveServer
+@using Microsoft.AspNetCore.Components.Web
+@using SGE.Aplicacion.Servicios
+@using SGE.Aplicacion.Entidades 
+@inject NavigationManager Navegador
+@inject CasoDeUsoObtenerUsuario CasoDeUsoObtenerUsuario
+@inject CasoDeUsoObtenerListaUsuarios CasoDeUsoObtenerListaUsuarios
+@inject IHashService HashService
+
+<h3>Iniciar Sesión</h3>
+
+<form>
+    <p>Email: <input placeholder="Email" @bind="_correoElectronico" class="form-control" required type="email"></p>
+    <p>Contraseña: <input placeholder="Contraseña" @bind="_password" type="password" class="form-control"></p>
+</form>
+
+<div class="container">
+    <button class="btn btn-primary" @onclick="MostrarConfirmacion">Iniciar Sesión</button>
+    <button @onclick="VolverHome" class="btn btn-primary">Home</button>
+</div>
+
+@code {
+    private string _correoElectronico = string.Empty;
+    private string _password = string.Empty;
+    private List<Usuario> _usuarios = new List<Usuario>();
+    private DialogoConfirmacion dialogo = null!; 
+    private void MostrarConfirmacion()
+    {
+        dialogo?.Mostrar("¿Está seguro que desea iniciar?");
+    }   
+
+    private void Iniciar()
+    {
+        // Obtener todos los usuarios
+        _usuarios = CasoDeUsoObtenerListaUsuarios.Ejecutar();
+
+        // Buscar el usuario por email utilizando LINQ
+        var usuarioEncontrado = _usuarios.FirstOrDefault(u => u.CorreoElectronico == _correoElectronico);
+
+        if (usuarioEncontrado != null)
+        {
+            // Verificar la contraseña
+            if (HashService.VerifyHash(_password, usuarioEncontrado.HashContraseña, usuarioEncontrado.SalContraseña))
+            {
+                // Verificar si el usuario es el administrador
+                if (usuarioEncontrado.Id == 1)
+                {
+                    // Redirigir a la página de administrador
+                    Navegador.NavigateTo("/Menu_Administrador");
+                }
+                else
+                {
+                    // Redirigir a la página principal
+                    Navegador.NavigateTo("/Menu_Usuario");
+                }
+            }
+            else
+            {
+                dialogo?.Mostrar("La contraseña ingresada es incorrecta. Contactar al soporte técnico.");
+            }
+        }
+        else
+        {
+            dialogo?.Mostrar("El email ingresado no está registrado. Por favor, registre una cuenta o contacte al soporte técnico.");
+        }
+    }
+
+    [Inject] private NavigationManager NavigationManager { get; set; } = null!;
+    
+    void VolverHome()
+    {
+        NavigationManager.NavigateTo("/"); // Vuelve al Home
+    }
+}

@@ -1,6 +1,6 @@
-﻿using SGE.Aplicacion.Entidades;
+﻿
 namespace SGE.Aplicacion.Interfaces;
-
+using SGE.Aplicacion.Entidades;
 public interface IExpedienteRepositorio
 {
     void Agregar(Expediente expediente);

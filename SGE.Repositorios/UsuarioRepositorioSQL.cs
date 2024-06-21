@@ -1,10 +1,10 @@
-﻿using SGE.Aplicacion.Interfaces;
+﻿namespace SGE.Repositorios;
+using SGE.Aplicacion.Interfaces;
 using SGE.Aplicacion.Entidades;
 using Microsoft.EntityFrameworkCore;
 using SGE.Aplicacion.CasosDeUso;
 using SGE.Aplicacion.Enumerativos;
 using System.Collections.ObjectModel;
-namespace SGE.Repositorios;
 public class UsuarioRepositorioSQL: IUsuarioRepositorio
 {
     static UsuarioRepositorioSQL(){

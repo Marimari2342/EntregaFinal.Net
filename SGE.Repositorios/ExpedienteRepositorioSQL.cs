@@ -1,6 +1,6 @@
-﻿using SGE.Aplicacion.Entidades;
+﻿namespace SGE.Repositorios;
+using SGE.Aplicacion.Entidades;
 using SGE.Aplicacion.Interfaces;
-namespace SGE.Repositorios;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 

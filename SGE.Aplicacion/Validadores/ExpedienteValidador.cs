@@ -1,6 +1,6 @@
-﻿using SGE.Aplicacion.Entidades;
+﻿
 namespace SGE.Aplicacion.Validadores;
-
+using SGE.Aplicacion.Entidades;
 public static class ExpedienteValidador
 {
     public static bool Validar(Expediente e, out string mensajeError){

@@ -1,7 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿namespace SGE.Repositorios;
+using Microsoft.EntityFrameworkCore;
 using SGE.Aplicacion.Entidades;
-
-namespace SGE.Repositorios;
 
 public class EntidadesContext: DbContext 
 {

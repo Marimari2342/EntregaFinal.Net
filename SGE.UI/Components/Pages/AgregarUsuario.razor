@@ -1,0 +1,54 @@
+﻿@page "/AgregarUsuario"
+@rendermode InteractiveServer
+@using Microsoft.AspNetCore.Components.Web
+@using SGE.Aplicacion.Servicios
+@inject NavigationManager Navegador
+@inject CasoDeUsoAgregarUsuario CasoDeUsoAgregarUsuario
+@inject IHashService HashService
+
+<form>
+    <p>Nombre: <input placeholder="Nombre" @bind="_usuario.Nombre" class="form-control" required type="text"></p>
+    <p>Apellido: <input placeholder="Apellido" @bind="_usuario.Apellido" class="form-control" required type="text"></p>
+    <p>Email: <input placeholder="Email" @bind="_usuario.CorreoElectronico" class="form-control" required type="email"></p>
+    <p>Contraseña: <input placeholder="Contraseña" @bind="_password" type="password" class="form-control"></p>
+</form>
+
+<div class="container">
+    <button class="btn btn-primary" @onclick="RegistrarUsuario">Aceptar</button>
+    <button @onclick="VolverHome" class="btn btn-primary">Home</button>
+</div>
+
+@code {
+    private Usuario _usuario = new Usuario();
+    private string _password = string.Empty;
+    private int _proximoID = 1; // Variable para almacenar el próximo ID
+
+    protected override void OnInitialized()
+    {
+        // Obtener la lista de usuarios para determinar el próximo ID
+        var usuarios = CasoDeUsoObtenerListaUsuarios.Ejecutar();
+        if (usuarios.Count > 0)
+        {
+            // Obtener el último ID y sumarle 1 para el próximo usuario
+            _proximoID = usuarios.Max(u => u.Id) + 1;
+        }
+    }
+
+    private void RegistrarUsuario()
+    {
+        // Generar hash y sal para la contraseña ingresada
+        (string hash, string sal) = HashService.CreateHash(_password);
+        _usuario.Id = _proximoID;
+        _usuario.HashContraseña = hash;
+        _usuario.SalContraseña = sal;
+        CasoDeUsoAgregarUsuario.Ejecutar(_usuario);
+        _usuario = new Usuario();
+    }
+
+    [Inject] private NavigationManager NavigationManager { get; set; } = null!;
+
+    void VolverHome()
+    {
+        NavigationManager.NavigateTo("/"); // Vuelve al Home
+    }
+}

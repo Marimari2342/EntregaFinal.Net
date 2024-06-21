@@ -1,3 +1,7 @@
+using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using SGE.UI.Components;
 using SGE.UI.Data;
 using SGE.Aplicacion.CasosDeUso;
@@ -23,6 +27,7 @@ builder.Services.AddTransient<CasoDeUsoListarUsuarios>();
 builder.Services.AddTransient<CasoDeUsoModificarUsuario>();
 builder.Services.AddTransient<CasoDeUsoEliminarUsuario>();
 builder.Services.AddTransient<CasosDeUsoModificarPermisos>();
+builder.Services.AddTransient<CasoDeUsoObtenerListaUsuarios>();
 
 builder.Services.AddTransient<CasoDeUsoExpedienteAlta>();
 builder.Services.AddTransient<CasoDeUsoExpedienteBaja>();
@@ -34,6 +39,7 @@ builder.Services.AddTransient<CasoDeUsoTramiteConsultaPorEtiqueta>();
 builder.Services.AddTransient<CasoDeUsoTramiteModificacion>();
 builder.Services.AddTransient<CasoDeUsoTramiteAlta>();
 builder.Services.AddTransient<CasoDeUsoTramiteBaja>();
+
 
 builder.Services.AddSingleton<IUsuarioRepositorio, UsuarioRepositorioSQL>();
 builder.Services.AddSingleton<ITramiteRepositorio, TramiteRepositorioSQL>();

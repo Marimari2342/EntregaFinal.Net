@@ -4,7 +4,8 @@
 @using SGE.Aplicacion.Servicios
 @inject NavigationManager Navegador
 @inject CasoDeUsoAgregarUsuario CasoDeUsoAgregarUsuario
-@inject SGE.Aplicacion.Servicios.HashService HashService
+@inject IHashService HashService
+@inject DialogoConfirmacion Dialogo
 <form>
     <p>Nombre: <input placeholder="Nombre" @bind="_usuario.Nombre" class="form-control" required type="text"></p>
     <p>Apellido: <input placeholder="Apellido" @bind="_usuario.Apellido" class="form-control" required type="text"></p>
@@ -12,7 +13,10 @@
     <p>Contraseña: <input placeholder="Contraseña" @bind="_password" type="password" class="form-control"></p>
 </form>
 
-<button class="btn btn-primary" @onclick="Inicializar">Aceptar</button>
+<div class="container">
+    <button class="btn btn-primary" @onclick="Inicializar">Aceptar</button>
+    <button @onclick="VolverHome" class="btn btn-primary">Home</button>
+</div>
 
 @code {
     private Usuario _usuario = new Usuario();
@@ -32,5 +36,10 @@
 
         // Resetear el usuario después de agregarlo 
         _usuario = new Usuario();
+    }
+    [Inject] private NavigationManager NavigationManager { get; set; } = null!;
+    void VolverHome()
+    {
+        NavigationManager.NavigateTo("/"); // Vuelve al Home
     }
 }

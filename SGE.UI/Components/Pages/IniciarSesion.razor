@@ -6,7 +6,7 @@
 @inject NavigationManager Navegador
 @inject CasoDeUsoObtenerUsuario CasoDeUsoObtenerUsuario
 @inject CasoDeUsoObtenerListaUsuarios CasoDeUsoObtenerListaUsuarios
-@inject SGE.Aplicacion.Servicios.HashService HashService
+@inject IHashService HashService
 
 <h3>Iniciar Sesión</h3>
 
@@ -15,18 +15,16 @@
     <p>Contraseña: <input placeholder="Contraseña" @bind="_password" type="password" class="form-control"></p>
 </form>
 
-<button class="btn btn-primary" @onclick="Iniciar">Iniciar Sesión</button>
-
-@if (!string.IsNullOrEmpty(_mensajeError))
-{
-    <p><em>Loading...</em></p>
-}
+<div class="container">
+    <button class="btn btn-primary" @onclick="Iniciar">Iniciar Sesión</button>
+    <button @onclick="VolverHome" class="btn btn-primary">Home</button>
+</div>
 
 @code {
     private string _correoElectronico = string.Empty;
     private string _password = string.Empty;
-    private string _mensajeError = string.Empty;
     private List<Usuario> _usuarios = new List<Usuario>();
+    private DialogoConfirmacion? dialogo;
 
     protected void Iniciar()
     {
@@ -39,20 +37,34 @@
         if (usuarioEncontrado != null)
         {
             // Verificar la contraseña
-
             if (HashService.VerifyHash(_password, usuarioEncontrado.HashContraseña, usuarioEncontrado.SalContraseña))
             {
-                // Redirigir a la página principal o a donde sea necesario
-                Navegador.NavigateTo("/dashboard");
+                // Verificar si el usuario es el administrador
+                if (usuarioEncontrado.Id == 1)
+                {
+                    // Redirigir a la página de administrador
+                    Navegador.NavigateTo("/Menu_Administrador");
+                }
+                else
+                {
+                    // Redirigir a la página principal
+                    Navegador.NavigateTo("/Menu_Usuario");
+                }
             }
             else
             {
-                _mensajeError = "La contraseña ingresada es incorrecta. Contactar al soporte técnico.";
+                dialogo?.Mostrar("La contraseña ingresada es incorrecta. Contactar al soporte técnico.");
             }
         }
         else
         {
-            _mensajeError = "El email ingresado no está registrado. Por favor, registre una cuenta o contacte al soporte técnico.";
+            dialogo?.Mostrar("El email ingresado no está registrado. Por favor, registre una cuenta o contacte al soporte técnico.");
         }
+    }
+
+    [Inject] private NavigationManager NavigationManager { get; set; } = null!;
+    void VolverHome()
+    {
+        NavigationManager.NavigateTo("/"); // Vuelve al Home
     }
 }

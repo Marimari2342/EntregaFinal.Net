@@ -1,0 +1,71 @@
+@page "/expediente/{Id:int?}"
+@model MyApp.Namespace.AgregarExpedienteModel
+@inject NavigationManager Navegador;
+@inject CasoDeUsoExpedienteAlta CasoDeUsoExpedienteAlta
+@inject CasoDeUsoExpedienteConsultaPorId CasoDeUsoExpedienteConsultaPorId
+@inject CasoDeUsoExpedienteModificacion CasoDeUsoExpedienteModificacion
+@inject CasoDeUsoObtenerUsuario CasoDeUsoObtenerUsuario
+
+
+@if (_esNuevoExpediente)
+{
+    <h3>Agregando un nuevo expediente</h3>
+}
+else
+{
+    <h3>Modificando el Expediente con ID"@_expediente.Id"</h3>
+}
+
+<p>ID del Usuario :</p><input placeholder="ID del Usuario" @bind="_Expediente.IdUsuarioUltimaModificacion"
+    class="form-control">
+<p>Caratula :</p><input placeholder="Caratula" @bind="_Expediente.Caratula" class="form-control">
+<button class="btn btn-primary" @onclick="Aceptar">Aceptar</button>
+@if (!esCorrecto)
+{
+    <p style="color: red; margin-left: 1.2rem;">El Titular con ID @_Expediente.TitularId no existe.</p>
+}
+
+@code {
+Expediente _Expediente = new Expediente();
+bool esCorrecto = true;
+DateTime creacion;
+
+[Parameter] public int? Id { get; set; }
+bool _esNuevoExpediente = true;
+
+protected override void OnParametersSet()
+{
+if (Id != null)
+{
+var expedienteExistente = CasoDeUsoExpedienteConsultaPorId(Id).Ejecutar(Id.Value);
+if (expedienteExistente != null)
+{
+creacion = expedienteExistente.FechaCreacion;
+_Expediente = expedienteExistente;
+_esNuevoExpediente = false;
+}
+}
+}
+
+void Aceptar()
+{
+if (GetTitularUseCase.Ejecutar(_Expediente.TitularId) != null)
+{
+if (_esNuevoExpediente)
+{
+AgregarExpedienteUseCase.Ejecutar(_Expediente);
+}
+else
+{
+ModificarExpedienteUseCase.Ejecutar(_Expediente);
+}
+
+_Expediente = new Expediente();
+Navegador.NavigateTo("listadoExpedientes");
+}
+else
+{
+esCorrecto = false;
+}
+}
+}

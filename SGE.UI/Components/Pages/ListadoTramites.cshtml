@@ -1,0 +1,81 @@
+@page "/listadoTramites"
+@model MyApp.Namespace.ListadoTramitesModel
+@inject CasoDeUsoTramiteConsultaPorEtiqueta CasoDeUsoTramiteConsultaPorEtiqueta
+@inject CasoDeUsoTramiteBaja CasoDeUsoTramiteBaja
+@inject NavigationManager Navegador
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado De Tramites</title>
+</head>
+<body>
+    <DialogoConfirmacion @ref="dialogo" OnConfirmado="Eliminar"/>
+    <table class="table">
+   <thead>
+<tr>
+           <th>ID</th>
+           <th>ID EXPEDIENTE</th>
+           <th>ETIQUETA</th>
+           <th>CONTENIDO</th>
+           <th>FECHA CREACION</th>
+           <th>FECHA ULTIMA MODIFICACION</th>
+           <th>IdUsuarioUltimaModificacion</th>
+       </tr>
+   </thead>
+   <tbody>
+       @foreach (var tramite in _tramite)
+       {
+           <tr>
+               <td>@tramite.ID</td>
+               <td>@tramite.ExpedienteId</td>
+               <td>@tramite.Etiqueta</td>
+               <td>@tramite.Contenido</td>
+               <td>@tramite.FechaCreacion.ToString("dd/MM/yyyy")</td> 
+               <td>@tramite.UltimaModificacion.ToString("dd/MM/yyyy")</td>
+<td>
+                    <button class="btn btn-primary" @onclick="() => ModificarPoliza(poliza)">
+                        <span class="oi oi-pencil"></span>
+                    </button>
+                    <button class="btn btn-danger" @onclick="()=>ConfirmarEliminacion(poliza)">
+                        <span class="oi oi-trash"></span>
+                    </button>
+                </td>
+
+               
+           </tr>
+       }
+   </tbody>
+</table>
+</body>
+</html>
+@code{
+List<Tramite> _tramites = new();
+        protected override void OnInitialized()
+        {
+            _polizas = ListarPolizasUseCase.Ejecutar();
+        }
+    
+    DialogoConfirmacion dialogo = null!;
+    Poliza? _PolizaParaEliminar = null;
+    void ModificarPoliza(Poliza poli)
+        {
+             Navegador.NavigateTo($"Poliza/{poli.ID}");
+        }
+    private void ConfirmarEliminacion(Poliza poli)
+    {
+        _PolizaParaEliminar = poli;
+        @* dialogo.Mensaje = $"¿Desea eliminar la Poliza con id {poli.ID}?"; *@
+dialogo.Mostrar($"¿Desea eliminar la Poliza con id {poli.ID}?");
+    }
+    private void Eliminar()
+    {
+        if (_PolizaParaEliminar != null)
+        {
+            EliminarPolizaUseCase.Ejecutar(_PolizaParaEliminar);
+            _polizas = ListarPolizasUseCase.Ejecutar(); //se actualiza la lista de clientes
+        }
+    }
+}

@@ -1,0 +1,93 @@
+@page "/listadoUsuarios"
+@rendermode InteractiveServer
+@using Microsoft.AspNetCore.Components.Web
+@using SGE.Aplicacion.Servicios
+@inject CasoDeUsoListarUsuarios CasoDeUsoListarUsuarios
+@inject CasoDeUsoEliminarUsuario CasoDeUsoEliminarUsuario
+@inject NavigationManager Navegador
+
+<PageTitle>ListarUsuarios</PageTitle>
+
+<h1>Listado de Usuarios</h1>
+
+<p>A continuación se visualiza el listado de los usuarios.</p>
+
+@if (_usuarios == null)
+{
+    <p><em>Cargando...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Correo electrónico</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var usuario in _usuarios)
+            {
+                <tr>
+                    <td>@usuario.Id</td>
+                    <td>@usuario.Nombre</td>
+                    <td>@usuario.Apellido</td>
+                    <td>@usuario.CorreoElectronico</td>
+                </tr>
+                <td>
+                    <button class="btn btn-primary" @onclick="()=>ModificarUsuario(usuario)">
+                        <span class="oi oi-pencil"></span>
+                    </button>
+                </td>
+                <td>
+                    <button class="btn btn-danger" @onclick="()=>ConfirmarEliminacion(usuario)">
+                        <span class="oi oi-trash"></span>
+                    </button>
+                </td>
+            }
+        </tbody>
+    </table>
+}
+<div class="container">
+    <button @onclick="VolverHome" class="btn btn-primary">Home</button>
+</div>
+
+
+
+@code {
+    List<Usuario> _usuarios = new List<Usuario>();
+
+    protected override void OnInitialized()
+    {
+        _usuarios = CasoDeUsoListarUsuarios.Ejecutar();
+    }
+
+    [Inject] private NavigationManager NavigationManager { get; set; } = null!;
+    void VolverHome()
+    {
+        NavigationManager.NavigateTo("/"); // Vuelve al Home
+    }
+    DialogoConfirmacion dialogo = null!;
+    Usuario? _usuarioEliminar = null;
+    private void ConfirmarEliminacion(Usuario usuario)
+    {
+        _usuarioEliminar = usuario;
+        dialogo.Mensaje = $"¿Desea eliminar el usuario {usuario.Id}?";
+        dialogo.Mostrar();
+    }
+    private void Eliminar()
+    {
+        if (_usuarioEliminar != null)
+        {
+            CasoDeUsoEliminarUsuario.Ejecutar(_usuarioEliminar);
+            _usuarios = CasoDeUsoListarUsuarios.Ejecutar(); //se actualiza la lista
+        }
+    }
+    void ModificarUsuario(Usuario usuario)
+    {
+        Navegador.NavigateTo($"usuario/editar/{usuario.Id}");
+    }
+
+}

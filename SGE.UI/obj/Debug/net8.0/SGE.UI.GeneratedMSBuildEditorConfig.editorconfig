@@ -58,6 +58,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMaXN0YXJUcmFtaXRlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/maria/Downloads/UltimoUltimo/EntregaFinal.Net/SGE.UI/Components/Pages/ListarUsuarios.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMaXN0YXJVc3Vhcmlvcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/maria/Downloads/UltimoUltimo/EntregaFinal.Net/SGE.UI/Components/Pages/UsuarioAdministrador.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xVc3VhcmlvQWRtaW5pc3RyYWRvci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 

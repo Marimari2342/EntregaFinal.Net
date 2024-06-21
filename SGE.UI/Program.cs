@@ -20,6 +20,7 @@ builder.Services.AddRazorComponents()
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<WeatherForecastService>();
+builder.Services.AddSingleton<DialogoConfirmacion>();
 
 builder.Services.AddTransient<CasoDeUsoObtenerUsuario>();
 builder.Services.AddTransient<CasoDeUsoAgregarUsuario>();

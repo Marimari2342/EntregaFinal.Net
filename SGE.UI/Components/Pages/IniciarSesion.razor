@@ -20,18 +20,15 @@
     <button @onclick="VolverHome" class="btn btn-primary">Home</button>
 </div>
 
-<DialogoConfirmacion @ref="dialogo" OnConfirmado="Iniciar" />
-
 @code {
     private string _correoElectronico = string.Empty;
     private string _password = string.Empty;
     private List<Usuario> _usuarios = new List<Usuario>();
-    private DialogoConfirmacion? dialogo;
-
+    private DialogoConfirmacion dialogo = null!; 
     private void MostrarConfirmacion()
     {
-        dialogo?.Mostrar("¿Estás seguro que deseas iniciar sesión?");
-    }
+        dialogo?.Mostrar("¿Está seguro que desea iniciar?");
+    }   
 
     private void Iniciar()
     {

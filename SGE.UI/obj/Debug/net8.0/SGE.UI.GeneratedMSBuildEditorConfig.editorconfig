@@ -26,6 +26,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEaWFsb2dvQ29uZmlybWFjaW9uLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/maria/Downloads/UltimoUltimo/EntregaFinal.Net/SGE.UI/Components/Pages/AgregarExpediente.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZ3JlZ2FyRXhwZWRpZW50ZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/maria/Downloads/UltimoUltimo/EntregaFinal.Net/SGE.UI/Components/Pages/AgregarTramite.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZ3JlZ2FyVHJhbWl0ZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -89,11 +93,3 @@ build_metadata.AdditionalFiles.CssScope = b-k716zha75e
 [C:/Users/maria/Downloads/UltimoUltimo/EntregaFinal.Net/SGE.UI/Components/Layout/NavMenu.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-067s78a2ky
-
-[C:/Users/maria/Downloads/UltimoUltimo/EntregaFinal.Net/SGE.UI/Components/Pages/AgregarExpediente.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBZ3JlZ2FyRXhwZWRpZW50ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/maria/Downloads/UltimoUltimo/EntregaFinal.Net/SGE.UI/Components/Pages/ListadoTramites.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xMaXN0YWRvVHJhbWl0ZXMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 

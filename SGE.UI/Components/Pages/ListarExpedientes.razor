@@ -2,6 +2,8 @@
 @attribute [StreamRendering]
 @rendermode InteractiveServer
 @inject NavigationManager Navegador
+@using Microsoft.AspNetCore.Components.Web
+@using SGE.Aplicacion.Servicios
 @inject CasoDeUsoExpedienteConsultaTodos CasoDeUsoExpedienteConsultaTodos
 @inject CasoDeUsoExpedienteBaja CasoDeUsoExpedienteBaja
 
@@ -42,6 +44,16 @@ else
                     <td>@expediente.Estado</td>
                     <td>@expediente.Tramites</td>
                 </tr>
+                <td>
+                    <button class="btn btn-primary" @onclick="()=>ModificarExpediente(expediente)">
+            <span class="oi oi-pencil"></span>
+            </button>
+        </td>
+        <td>
+                    <button class="btn btn-danger" @onclick="()=>ConfirmarEliminacion(expediente)">
+            <span class="oi oi-trash"></span>
+            </button>
+        </td>
             }
         </tbody>
     </table>
@@ -62,6 +74,26 @@ else
     void VolverHome()
     {
         NavigationManager.NavigateTo("/"); // Vuelve al Home
+    }
+    DialogoConfirmacion dialogo = null!;
+    Expediente? _expedienteEliminar = null;
+    private void ConfirmarEliminacion(Expediente expediente)
+    {
+        _expedienteEliminar = expediente;
+        dialogo.Mensaje = $"¿Desea eliminar el expediente {expediente.Id}?";
+        dialogo.Mostrar();
+    }
+    private void Eliminar()
+    {
+        if (_expedienteEliminar != null)
+        {
+            CasoDeUsoExpedienteBaja.Ejecutar(_expedienteEliminar.Id, _expedienteEliminar.IdUsuarioUltimaModificacion);
+            _expedientes = CasoDeUsoExpedienteConsultaTodos.Ejecutar(); //se actualiza la lista
+        }
+    }
+    void ModificarExpediente(Expediente expediente)
+    {
+        Navegador.NavigateTo($"expedientes/editar/{expediente.Id}");
     }
 
         }

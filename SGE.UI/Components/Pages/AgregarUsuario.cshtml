@@ -1,5 +1,7 @@
-﻿@page "/Usuario/{id:int?}"
+﻿@page "/Usuario"
 @model MyApp.Namespace.AgregarUsuarioModel
+@rendermode InteractiveServer
+@inject NavigationManager Navegador;
 @inject NavigationManager Navegador;
 @inject CasoDeUsoAgregarUsuario CasoDeUsoAgregarUsuario
 @inject CasoDeUsoModificarUsuario CasoDeUsoModificarUsuario
@@ -18,7 +20,7 @@ else {
 @if (!_esNuevoUsuario) {
     <p>Contraseña :</p><input placeholder="Contraseña" @bind="_password" type="password" class="form-control">
 }
-
+@*
 <button class="btn btn-primary" @onclick="Aceptar">Aceptar</button>
 
 @code {
@@ -65,4 +67,4 @@ else {
             Navegador.NavigateTo("/listadousuarios");
         }
     }
-}
+}*@

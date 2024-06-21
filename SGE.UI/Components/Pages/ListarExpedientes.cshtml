@@ -1,0 +1,89 @@
+@page "/listadoExpedientes"
+@using MyApp.Namespace // Reemplaza esto con el namespace adecuado donde están tus modelos y servicios
+@model ListarExpedientesModel
+@inject NavigationManager Navegador
+@inject CasoDeUsoExpedienteConsultaTodos CasoDeUsoExpedienteConsultaTodos
+@inject CasoDeUsoExpedienteBaja CasoDeUsoExpedienteBaja
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Expedientes</title>
+</head>
+
+<body>
+    <DialogoConfirmacion @ref="dialogo" OnConfirmado="Eliminar" />
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>CARÁTULA</th>
+                <th>FECHA DE CREACIÓN</th>
+                <th>ÚLTIMA MODIFICACIÓN</th>
+                <th>ID DE USUARIO ÚLTIMA MODIFICACIÓN</th>
+                <th>ESTADO</th>
+                <th>TRÁMITES</th>
+                <th>ACCIONES</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var expediente in _expedientes)
+            {
+                <tr>
+                    <td>@expediente.Id</td>
+                    <td>@expediente.Caratula</td>
+                    <td>@expediente.FechaCreacion</td>
+                    <td>@expediente.UltimaModificacion</td>
+                    <td>@expediente.IdUsuarioUltimaModificacion</td>
+                    <td>@expediente.Estado</td>
+                    <td>@expediente.Tramites</td>
+                    <td>
+                        <button class="btn btn-primary" @onclick="() => ModificarExpediente(expediente)">
+                            <span class="oi oi-pencil"></span>
+                        </button>
+                        <button class="btn btn-danger" @onclick="() => ConfirmarEliminacion(expediente)">
+                            <span class="oi oi-trash"></span>
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @code {
+    List<Expediente> _expedientes = new List<Expediente>();
+
+            protected override void OnInitialized()
+            {
+            _expedientes = CasoDeUsoExpedienteConsultaTodos.Ejecutar();
+            }
+
+            DialogoConfirmacion dialogo = null!;
+            Expediente? _expedienteParaEliminar = null;
+
+            void ModificarExpediente(Expediente expediente)
+            {
+            Navegador.NavigateTo($"expediente/{expediente.Id}");
+            }
+
+            void ConfirmarEliminacion(Expediente expediente)
+            {
+            _expedienteParaEliminar = expediente;
+            dialogo.Mostrar($"¿Desea eliminar el expediente con ID {expediente.Id}?");
+            }
+
+            void Eliminar()
+            {
+            if (_expedienteParaEliminar != null)
+            {
+            CasoDeUsoExpedienteBaja.Ejecutar(_expedienteParaEliminar);
+            _expedientes = CasoDeUsoExpedienteConsultaTodos.Ejecutar();
+            }
+            }
+            }
+</body>
+
+</html>

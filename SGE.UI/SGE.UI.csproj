@@ -2,6 +2,9 @@
 
   <ItemGroup>
     <Content Remove="Components\Pages\AgregarUsuario.cshtml" />
+    <Content Remove="Components\Pages\ListarExpedientes.cshtml" />
+    <Content Remove="Components\Pages\ListadoUsuarios.cshtml" />
+    <Content Remove="Components\Pages\AgregarTramite.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -16,23 +19,32 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <UpToDateCheckInput Remove="Components\Pages\AgregarUsuario.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <_ContentIncludedByDefault Remove="Components\Pages\AgregarUsuario.cshtml" />
+    <_ContentIncludedByDefault Remove="Components\Pages\ListarExpedientes.cshtml" />
+    <_ContentIncludedByDefault Remove="Components\Pages\ListadoUsuarios.cshtml" />
+    <_ContentIncludedByDefault Remove="Components\Pages\AgregarTramite.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
     <UpToDateCheckInput Remove="Components\Pages\AgregarUsuario.cshtml" />
+    <UpToDateCheckInput Remove="Components\Pages\ListarExpedientes.cshtml" />
+    <UpToDateCheckInput Remove="Components\Pages\ListadoUsuarios.cshtml" />    
+    <UpToDateCheckInput Remove="Components\Pages\AgregarTramite.cshtml" />    
   </ItemGroup>
 
   <ItemGroup>
     <None Include="Components\Pages\AgregarUsuario.cshtml" />
+    <None Include="Components\Pages\ListarExpedientes.cshtml" />
+    <None Include="Components\Pages\ListadoUsuarios.cshtml" />
+    <None Include="Components\Pages\AgregarTramite.cshtml" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Components\Pages\Usuario\" />
   </ItemGroup>
 
 </Project>

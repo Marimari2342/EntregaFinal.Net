@@ -1,19 +1,26 @@
-﻿@page "/"
+﻿@namespace SGE.UI.Pages
+@page "/"
+@rendermode InteractiveServer
 @using Microsoft.AspNetCore.Components.Web
-@namespace SGE.UI.Pages
+@inject NavigationManager Navegador;
 
 <h1>Bienvenido</h1>
 
 <div class="container">
     <p>Ingrese opción deseada:</p>
-    <button @onclick="NavigateToRegistro" class="btn btn-primary">Iniciar sesión</button>
+    <button @onclick="NavigateToCrearUsuario" class="btn btn-primary">Iniciar sesión</button>
     <button @onclick="NavigateToRegistro" class="btn btn-primary">Registrarse</button>
 </div>
 
 @code {
     [Inject] private NavigationManager NavigationManager { get; set; } = null!;
+    private void NavigateToCrearUsuario()
+    {
+        NavigationManager.NavigateTo("/IniciarSesion"); // Redirige a la página de registro de usuarios
+    }
+
     private void NavigateToRegistro()
     {
-        NavigationManager.NavigateTo("/Usuario"); // Redirige a la página de registro de usuarios
+        NavigationManager.NavigateTo("/AgregarUsuario"); // Redirige a la página de registro de usuarios
     }
 }

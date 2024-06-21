@@ -34,8 +34,8 @@ else
     {
         if (Id != null) //si existe el tramite
         {
-            var exp = CasoDeUsoExpedienteConsultaPorId(Id.Value); //me quedo con el expediente
-            var tram = exp.tramites; //me quedo con la lista de tramites de ese expediente
+            var exp = CasoDeUsoExpedienteConsultaPorId.Ejecutar(Id.Value); //me quedo con el expediente
+            var tram = exp.Tramites; //me quedo con la lista de tramites de ese expediente
             if (tram != null)
             {
                 _tramite = tram;

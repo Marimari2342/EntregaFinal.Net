@@ -30,8 +30,16 @@
 
         <!-- Botón para consultar trámite por etiqueta -->
         <button class="btn btn-primary" @onclick="ConsultarTramitePorEtiqueta">Consultar Trámite por Etiqueta</button>
-        
-        <button @onclick="VolverInicio" class="btn btn-primary">Home</button>
+
+        <!-- Formulario para consultar expediente por ID -->
+        <form class="form-inline" @onsubmit="ConsultarExpedientePorId">
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="inputIdExpediente" class="sr-only">ID Expediente</label>
+                <input type="text" class="form-control" id="inputIdExpediente" placeholder="ID Expediente"
+                    @bind="_idExpediente">
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Consultar Expediente por ID</button>
+        </form>
     </div>
 }
 else
@@ -53,6 +61,11 @@ else
         CasoModificarUsuario.Ejecutar(UsuarioActual);
     }
 
+    void VolverInicio()
+    {
+        NavigationManager.NavigateTo("/"); // Vuelve al Home
+    }
+
     private void ConsultarExpedientePorId()
     {
         var expediente = CasoConsultaExpedientePorId.Ejecutar(_idExpediente);
@@ -61,19 +74,6 @@ else
 
     private void ConsultarTodosExpedientes()
     {
-        var todosExpedientes = CasoConsultaTodosExpedientes.Ejecutar();
-        // Implementar lógica para mostrar todos los expedientes en la interfaz
-    }
-
-    private void ConsultarTramitePorEtiqueta()
-    {
-        var etiqueta = EtiquetaTramite.Importante; // Ejemplo de etiqueta de trámite
-        var tramites = CasoConsultaTramitePorEtiqueta.Ejecutar(etiqueta);
-        // Implementar lógica para mostrar los trámites en la interfaz
-    }
-
-    void VolverInicio()
-    {
-        NavigationManager.NavigateTo("/"); // Vuelve al Home
+        NavigationManager.NavigateTo("/listaexpedientes"); // Redirige a la lista de expedientes
     }
 }

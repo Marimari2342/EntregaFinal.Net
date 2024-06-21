@@ -45,8 +45,6 @@ C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.Assembl
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.AssemblyInfo.cs
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.csproj.CoreCompileInputs.cache
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.RazorAssemblyInfo.cache
-C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.RazorAssemblyInfo.cs
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\SGE.UI.sourcelink.json
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\laule\seminario\EntregaFinal.Net\SGE.UI\obj\Debug\net8.0\staticwebassets.development.json

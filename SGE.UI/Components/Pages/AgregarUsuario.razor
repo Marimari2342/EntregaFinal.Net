@@ -1,0 +1,44 @@
+﻿@page "/AgregarUsuario"
+@rendermode InteractiveServer
+@using Microsoft.AspNetCore.Components.Web
+@using SGE.Aplicacion.Servicios
+@inject NavigationManager Navegador
+@inject CasoDeUsoAgregarUsuario CasoDeUsoAgregarUsuario
+@inject IHashService HashService
+<form>
+    <p>Nombre: <input placeholder="Nombre" @bind="_usuario.Nombre" class="form-control" required type="text"></p>
+    <p>Apellido: <input placeholder="Apellido" @bind="_usuario.Apellido" class="form-control" required type="text"></p>
+    <p>Email: <input placeholder="Email" @bind="_usuario.CorreoElectronico" class="form-control" required type="email"></p>
+    <p>Contraseña: <input placeholder="Contraseña" @bind="_password" type="password" class="form-control"></p>
+</form>
+
+<div class="container">
+    <button class="btn btn-primary" @onclick="Inicializar">Aceptar</button>
+    <button @onclick="VolverHome" class="btn btn-primary">Home</button>
+</div>
+
+@code {
+    private Usuario _usuario = new Usuario();
+    private string _password = string.Empty;
+
+    protected void Inicializar()
+    {
+        // Generar hash y sal para la contraseña ingresada
+        (string hash, string sal) = HashService.CreateHash(_password);
+
+        // Asignar valores al usuario de hash y sal para no guardar la contraseña
+        _usuario.HashContraseña = hash;
+        _usuario.SalContraseña = sal;
+
+        // Ejecutar el caso de uso para agregar el usuario
+        CasoDeUsoAgregarUsuario.Ejecutar(_usuario);
+
+        // Resetear el usuario después de agregarlo 
+        _usuario = new Usuario();
+    }
+    [Inject] private NavigationManager NavigationManager { get; set; } = null!;
+    void VolverHome()
+    {
+        NavigationManager.NavigateTo("/"); // Vuelve al Home
+    }
+}

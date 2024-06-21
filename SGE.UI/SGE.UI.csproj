@@ -47,4 +47,8 @@
     <Folder Include="Components\Pages\Usuario\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Components\Pages\Usuario\" />
+  </ItemGroup>
+
 </Project>

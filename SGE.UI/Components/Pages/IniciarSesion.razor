@@ -16,19 +16,24 @@
 </form>
 
 <div class="container">
-    <button class="btn btn-primary" @onclick="Iniciar">Iniciar Sesión</button>
+    <button class="btn btn-primary" @onclick="MostrarConfirmacion">Iniciar Sesión</button>
     <button @onclick="VolverHome" class="btn btn-primary">Home</button>
 </div>
 
-
-<DialogoConfirmacion @ref="dialogo" />
+<DialogoConfirmacion @ref="dialogo" OnConfirmado="Iniciar" />
 
 @code {
     private string _correoElectronico = string.Empty;
     private string _password = string.Empty;
     private List<Usuario> _usuarios = new List<Usuario>();
-    private DialogoConfirmacion? dialogo;   
-    protected void Iniciar()
+    private DialogoConfirmacion? dialogo;
+
+    private void MostrarConfirmacion()
+    {
+        dialogo?.Mostrar("¿Estás seguro que deseas iniciar sesión?");
+    }
+
+    private void Iniciar()
     {
         // Obtener todos los usuarios
         _usuarios = CasoDeUsoObtenerListaUsuarios.Ejecutar();
@@ -56,7 +61,6 @@
             else
             {
                 dialogo?.Mostrar("La contraseña ingresada es incorrecta. Contactar al soporte técnico.");
-
             }
         }
         else
@@ -66,6 +70,7 @@
     }
 
     [Inject] private NavigationManager NavigationManager { get; set; } = null!;
+    
     void VolverHome()
     {
         NavigationManager.NavigateTo("/"); // Vuelve al Home

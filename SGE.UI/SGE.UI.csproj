@@ -35,4 +35,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.6" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Components\Pages\Usuario\" />
+  </ItemGroup>
+
 </Project>

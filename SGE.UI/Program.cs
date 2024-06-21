@@ -1,7 +1,3 @@
-using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using SGE.UI.Components;
 using SGE.UI.Data;
 using SGE.Aplicacion.CasosDeUso;
@@ -42,6 +38,7 @@ builder.Services.AddTransient<CasoDeUsoTramiteBaja>();
 builder.Services.AddSingleton<IUsuarioRepositorio, UsuarioRepositorioSQL>();
 builder.Services.AddSingleton<ITramiteRepositorio, TramiteRepositorioSQL>();
 builder.Services.AddSingleton<IExpedienteRepositorio, ExpedienteRepositorioSQL>();
+
 
 builder.Services.AddTransient<IServicioAutorizacion, ServicioAutorizacion>();
 builder.Services.AddTransient<IEspecificacionCambioEstado, EspecificacionCambioEstado>();
